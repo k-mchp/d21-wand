@@ -1,6 +1,6 @@
 ![https://www.microchip.com/](assets/microchip.png)![https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MPLAB-ML-Documentation&redirect=true](assets/MPLAB-MachineLearning.png)
 # Gesture Recognition with the MPLAB® ML Development Suite
-| ![Deployed gesture recognizer](assets/gestures-with-dashboard.gif) |
+| ![Dall Detection](assets/Picture1.png) |
 | :--: |
 | Deployed gesture recognizer |
 
