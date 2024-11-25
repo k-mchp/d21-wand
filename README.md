@@ -22,7 +22,7 @@ The [Activity dataset](https://github.com/MicrochipTech/ml-Fall-Detection-SAMD21
 
 In addition to the target activities, some additional gestures random activity signals  were collected to make up the *unknown* gestures class, which is used to help improve and validate the model's discriminatory ability.
 
-Furthermore, the *idle* class data consists of scenarios where the device is fully at rest in different orientations and other scenarios with small motion activities that included fidgeting with the board (manipulating the board randomly with the fingers) and pacing around the room while holding the board.
+Furthermore, the *idle* class data consists of scenarios where the device is fully at rest in different orientations and other scenarios with small motion activities that includes fidgeting with the board (manipulating the board randomly with the fingers) and pacing around the room while holding the board.
 
 ## Hardware Used
 * SAMD21 Machine Learning Evaluation Kit with Bosch BMI160 IMU [(EV45Y33A)](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A)
@@ -50,26 +50,13 @@ The firmware behavior can be summarized as operating in one of three distinct st
 | Buffer Overflow |	Yellow (DATA) and Red (ERROR) LED lit for 5 seconds	| Processing is not able to keep up with real-time; data buffer has been reset. |
 | Running | Yellow (DATA) LED flashing slowly |	Firmware is running normally. |
 
-In addition, the firmware also prints the classification output for each inference over the UART port. To view a visualization of the classification output, load the Data Visualizer Work Space file [gestures-demo-dashboard.dvws](https://github.com/MicrochipTech/ml-samd21-iot-mplabml-gestures-demo/tree/main/data-visualizer/) in MPLAB Data Visualizer and connect to the COM port of the SAMD21 kit with the following settings:
+In addition, the firmware also prints the classification output for each inference over the UART port. Connect to the COM port of the SAMD21 kit with the following settings:
 
 - Baudrate 115200
 - Data bits 8
 - Stop bits 1
 - Parity None
 
-| ![Terminal output](assets/gestures-dv-dashboard.png) |
-| :--: |
-| Gesture classification dashboard in MPLAB Data Visualizer |
-
-Note the firmware class ID mapping is as below:
-
-- *Unknown* - 0 (input outside of modeled behavior)
-- *Figure Eight* - 1
-- *Idle* - 2
-- *Unknown Gesture* - 3 (unknown gesture-like behavior)
-- *Up-down* - 4
-- *Wave* - 5
-- *Wheel* - 6
 
 ## Performing Gestures
 Gestures should be performed in a way that feels natural, using a thumb and index finger grip around the SAMD21 board as shown in the image below. The top of the board should be facing away from the user, with the USB connector oriented towards the ground.
@@ -78,14 +65,6 @@ Gestures should be performed in a way that feels natural, using a thumb and inde
 | :--: |
 | Thumb and index finger grip |
 
-The supported gestures are listed below (described from user's point of view):
-
-- Figure Eight - Move the board in a figure eight pattern, starting the gesture from the top of the eight and going left (counterclockwise) at a slow to moderate speed
-- Up-down - Move board up and down continuously at a moderate speed
-- Wave - Wave the board side to side at a moderate speed as if you were greeting someone
-- Wheel - Move the board in a clockwise circle (or wheel) continuously, at a moderate speed
-
-Also see the GIF at the top of this document for further reference.
 
 ## Firmware Benchmark
 Measured with the ICM42688 sensor configuration, ``-O2`` level compiler optimizations, and 48MHz clock
@@ -94,7 +73,7 @@ Measured with the ICM42688 sensor configuration, ``-O2`` level compiler optimiza
 - 16ms Inference time
 
 ## Classifier Performance
-Below is the confusion matrix for the test dataset. Note that the classes are highly imbalanced so accuracy is not a good indicator of overall performance.
+Below is the confusion matrix for the test dataset. Note that the classes are imbalanced so accuracy is not a good indicator of overall performance.
 
 ![Test set confusion matrix](assets/confusion-matrix.png)
 
