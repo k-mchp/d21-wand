@@ -18,13 +18,11 @@ In addition there is also an 'unknown' class for gesture-like movement and an 'i
 
 ## Continuous Gestures Dataset
 
-The [gestures dataset](https://github.com/MicrochipTech/ml-samd21-iot-mplabml-gestures-demo/tree/main/dataset/) was collected by Microchip employees and consists of two test subjects performing the continuous gestures as described in the section above with a [SAMD21 BMI160 evaluation board](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A). The dataset includes a collection of 10 second long samples in CSV format (ax,ay,az,gx,gy,gz format) split into training and test folds. CSV files are named according to the following template:
+The [Activity dataset](https://github.com/MicrochipTech/ml-Fall-Detection-SAMD21-IMU/tree/main/falldataset) was collected by Microchip employees and consists of two test subjects performing the fall activity as described in the section above with a [SAMD21 BMI160 evaluation board](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A). The dataset includes a collection of 10-second long samples in CSV format (ax,ay,az,gx,gy,gz format) split into training and test folds. 
 
-``<class>-<participant-id>-<extra-metadata>-<collection-date-yymmdd>-<sample-number>.csv``
+In addition to the target activities, some additional gestures random activity signals  were collected to make up the *unknown* gestures class, which is used to help improve and validate the model's discriminatory ability.
 
-In addition to the target gestures, some additional gestures - *triangle*, *forward wheel*, the letter *V*, and others - were collected to make up the *unknown* gestures class, which is used to help improve and validate the models discriminatory ability.
-
-Furthermore, the *idle* class data consists of scenarios where the device is fully at rest in different orientations, and other scenarios with small motion activity that included fidgeting with the board (manipulating the board randomly with the fingers) and pacing around the room while holding the board.
+Furthermore, the *idle* class data consists of scenarios where the device is fully at rest in different orientations and other scenarios with small motion activities that included fidgeting with the board (manipulating the board randomly with the fingers) and pacing around the room while holding the board.
 
 ## Hardware Used
 * SAMD21 Machine Learning Evaluation Kit with Bosch BMI160 IMU [(EV45Y33A)](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A)
