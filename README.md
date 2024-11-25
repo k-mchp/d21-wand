@@ -1,5 +1,5 @@
 ![https://www.microchip.com/](assets/microchip.png)![https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MPLAB-ML-Documentation&redirect=true](assets/MPLAB-MachineLearning.png)
-# Fall Detection with the MPLAB® ML Development Suite
+# Fall Detection with the MPLAB® Machine Learning Development Suite
 | ![Dall Detection](assets/Picture1.png) |
 | :--: |
 | Deployed gesture recognizer |
