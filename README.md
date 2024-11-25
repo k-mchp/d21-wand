@@ -1,6 +1,5 @@
 # ML-Fall-Detection-SAMD21-IMU
 ![https://www.microchip.com/](assets/microchip.png)
-# SAMD21 ML Evaluation Kit Data Logger
 ## Repository Overview
 This repository contains firmware for streaming up to 6-axes IMU data over UART from one of the SAMD21 Machine Learning Evaluation Kits (SAM-IoT + MikroE IMU2/IMU14 Click Board); the project can be configured to build firmware for both the Bosch IMU and TDK IMU variants, streaming using one of several formats as described in the sections below.
 
