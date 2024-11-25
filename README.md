@@ -2,7 +2,7 @@
 # Fall Detection with the MPLAB® Machine Learning Development Suite
 | ![Dall Detection](assets/Picture1.png) |
 | :--: |
-| Deployed gesture recognizer |
+| Fall Activity recognizer |
 
 ## Repository Overview
 This repository contains the firmware to classify a Fall activity detection on a SAMD21 Machine Learning Kit with the [Bosch BMI160 IMU](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A)
