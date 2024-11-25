@@ -66,12 +66,6 @@ Gestures should be performed in a way that feels natural, using a thumb and inde
 | Thumb and index finger grip |
 
 
-## Firmware Benchmark
-Measured with the ICM42688 sensor configuration, ``-O2`` level compiler optimizations, and 48MHz clock
-- 38.2kB Flash
-- 9.1kB RAM
-- 16ms Inference time
-
 ## Classifier Performance
 Below is the confusion matrix for the test dataset. Note that the classes are imbalanced so accuracy is not a good indicator of overall performance.
 
