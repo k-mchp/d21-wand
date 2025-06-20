@@ -61,7 +61,7 @@ In addition, the firmware also prints the classification output for each inferen
 ## Performing Gestures
 Gestures should be performed in a way that feels natural, using a thumb and index finger grip around the SAMD21 board as shown in the image below. The top of the board should be facing away from the user, with the USB connector oriented towards the ground.
 
-| ![Thumb and index finger grip](assets/thumb-forefinger-grip.jpg) |
+| ![Thumb and index finger grip](assets/sam-iot-holding-posture.png) |
 | :--: |
 | Thumb and index finger grip |
 
