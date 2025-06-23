@@ -1,0 +1,39 @@
+Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,Drive Strength
+1,PA00,SW0_GPIO_PA00,GPIO,Digital,In,n/a,Yes,No,NORMAL
+2,PA01,SW1_GPIO_PA01,GPIO,Digital,In,n/a,Yes,No,NORMAL
+3,PA02,,Available,,,,,,NORMAL
+4,PA03,,Available,,,,,,NORMAL
+7,PB08,,Available,,,,,,NORMAL
+8,PB09,,Available,,,,,,NORMAL
+9,PA04,MBUS_SPI_MOSI_SERCOM0_PAD0,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+10,PA05,MBUS_SPI_SCK_SERCOM0_PAD1,SERCOM0_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+11,PA06,MIKRO_CS,GPIO,Digital,Out,Low,,,NORMAL
+12,PA07,MBUS_SPI_MISO_SERCOM0_PAD3,SERCOM0_PAD3,Digital,High Impedance,n/a,No,No,NORMAL
+13,PA08,,Available,,,,,,NORMAL
+14,PA09,,Available,,,,,,NORMAL
+15,PA10,,Available,,,,,,NORMAL
+16,PA11,LED_YELLOW,GPIO,Digital,Out,High,,,NORMAL
+19,PB10,WDRV_WINC_RESETN,GPIO,Digital,Out,High,,,NORMAL
+20,PB11,WDRV_WINC_CHIP_EN,GPIO,Digital,Out,High,,,NORMAL
+21,PA12,S2_WINC_SPI_MOSI,SERCOM2_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+22,PA13,S2_WINC_SPI_SCK,SERCOM2_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+23,PA14,S2_WINC_SPI_CS,SERCOM2_PAD2,Digital,High Impedance,n/a,No,No,NORMAL
+24,PA15,S2_WINC_SPI_MISO,SERCOM2_PAD3,Digital,High Impedance,n/a,No,No,NORMAL
+25,PA16,S1_MBUS_I2C_SDA_PA16,SERCOM1_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+26,PA17,S1_MBUS_I2C_SCL_PA17,SERCOM1_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+27,PA18,WINC_INT,EIC_EXTINT2,Digital,High Impedance,n/a,No,No,NORMAL
+28,PA19,,Available,,,,,,NORMAL
+29,PA20,LED_GREEN,GPIO,Digital,Out,High,,,NORMAL
+30,PA21,LED_BLUE,GPIO,Digital,Out,High,,,NORMAL
+31,PA22,,Available,,,,,,NORMAL
+32,PA23,,Available,,,,,,NORMAL
+33,PA24,MIKRO_INT,EIC_EXTINT12,Digital,High Impedance,n/a,No,No,NORMAL
+34,PA25,LED_RED,GPIO,Digital,Out,High,,,NORMAL
+37,PB22,,Available,,,,,,NORMAL
+38,PB23,,Available,,,,,,NORMAL
+39,PA27,,Available,,,,,,NORMAL
+41,PA28,,Available,,,,,,NORMAL
+45,PA30,,Available,,,,,,NORMAL
+46,PA31,,Available,,,,,,NORMAL
+47,PB02,S5_UART_TX_PB02,SERCOM5_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+48,PB03,S5_UART_RX_PB03,SERCOM5_PAD1,Digital,High Impedance,n/a,Yes,No,NORMAL

@@ -52,6 +52,8 @@
 // Dump data to uart in form suitable for SensiMLs Data Capture Lab (simple stream format)
 #define DATA_STREAMER_FORMAT_SMLSS      3
 
+//Choose this if you want to transmit data through wifi
+#define DATA_STREAMER_FORMAT_WIFI       4
 // *****************************************************************************
 // *****************************************************************************
 // Section: User configurable application level parameters
@@ -60,7 +62,7 @@
 
 // Data streaming formatting selection
 #ifndef DATA_STREAMER_FORMAT
-#define DATA_STREAMER_FORMAT    DATA_STREAMER_FORMAT_ASCII
+#define DATA_STREAMER_FORMAT    DATA_STREAMER_FORMAT_WIFI
 #endif
 
 // IMU sampling rate in units of SNSR_SAMPLE_RATE_UNIT

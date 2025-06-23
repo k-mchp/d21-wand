@@ -44,18 +44,25 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+    #include "configuration.h"
 #include "interrupts.h"
 #include "definitions.h"
+
+ 
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Exception Handling Routine
 // *****************************************************************************
 // *****************************************************************************
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 8.6 might be violated here if the users provide a strong
+   implementations to these weak handler functions. Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1
+*/
+
 
 /* Brief default interrupt handlers for core IRQs.*/
-
-void __attribute__((noreturn)) NonMaskableInt_Handler(void)
+void __attribute__((noreturn, weak)) NonMaskableInt_Handler(void)
 {
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
     __builtin_software_breakpoint();
@@ -64,8 +71,8 @@ void __attribute__((noreturn)) NonMaskableInt_Handler(void)
     {
     }
 }
-
-void __attribute__((noreturn)) HardFault_Handler(void)
+ 
+void __attribute__((noreturn, weak)) HardFault_Handler(void)
 {
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
    __builtin_software_breakpoint();
@@ -75,7 +82,9 @@ void __attribute__((noreturn)) HardFault_Handler(void)
    }
 }
 
+ 
+/* MISRAC 2012 deviation block end for rule 8.6 */
+
 /*******************************************************************************
  End of File
  */
-

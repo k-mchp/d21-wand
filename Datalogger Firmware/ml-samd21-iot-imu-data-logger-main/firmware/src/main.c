@@ -77,6 +77,11 @@ size_t __attribute__(( unused )) UART_Write(uint8_t *ptr, const size_t nbytes) {
     return SERCOM5_USART_Write(ptr, nbytes) ? nbytes : 0;
 }
 
+void SERCOM1_Handler() {
+   
+}
+
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Generic stub definitions
@@ -90,7 +95,7 @@ size_t __attribute__(( unused )) UART_Read(uint8_t *ptr, const size_t nbytes) {
     return ringbuffer_read(&uartRxBuffer, ptr, nbytes);
 }
 
-static void Ticker_Callback() {
+static void Ticker_Callback(TC_TIMER_STATUS status, uintptr_t context) {
     static uint32_t mstick = 0;
 
     ++tickcounter;
@@ -184,15 +189,23 @@ int main ( void )
     uint32_t ssi_adtimer = 0;
     ssi_io_funcs_t ssi_io_s;
 #endif
-
+#if STREAM_FORMAT_IS(WIFI)
+    /*We are setting this manually assuming that both accel & gyro is used.
+     *Eventually we need something more elegant to automatically set this based
+     *on usage of IMU sensors. */
+    uint8_t wifi_tx_buffer[14];
+    uint8_t headerbyte = MDV_START_OF_FRAME;
+    wifi_tx_buffer[0] = headerbyte;
+    wifi_tx_buffer[13] = ~headerbyte;
+#endif
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
     /* Register and start the millisecond interrupt ticker */
     TC_TimerCallbackRegister(Ticker_Callback);
     TC_TimerStart();
-
-    printf("\n");
+   
+    printf("Magic Wand Datalogger\r\n");
 
     /* Application init routine */
     app_failed = 1;
@@ -330,6 +343,15 @@ int main ( void )
                 UART_Write((uint8_t *) ptr, sizeof(snsr_datapacket_t));
                 headerbyte = ~headerbyte;
                 UART_Write(&headerbyte, 1);
+    #elif STREAM_FORMAT_IS(WIFI)
+                if(get_TCP_client_state() == TCP_CLIENT_READY_TO_SEND)
+                {
+                    /* Copy 12 bytes of sensor data into tx_buf starting at index 1.
+                     * This is assuming both accel and gyro is used.
+                     */
+                    memcpy(&wifi_tx_buffer[1], (uint8_t *) ptr, 12);
+                    tx_wifi_new_sensordata(wifi_tx_buffer);
+                }
     #elif STREAM_FORMAT_IS(SMLSS)
                 #if (SSI_JSON_CONFIG_VERSION == 2)
                 ssiv2_publish_sensor_data(0, (uint8_t*) ptr, sizeof(snsr_datapacket_t));
