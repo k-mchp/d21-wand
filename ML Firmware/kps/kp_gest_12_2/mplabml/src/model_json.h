@@ -1,0 +1,8 @@
+#ifndef __MODEL_JSON_H__
+#define __MODEL_JSON_H__
+
+const char recognition_model_string_json[] = {"{\"NumModels\":1,\"ModelIndexes\":{\"0\":\"GEST_12_RANK_2\"},\"ModelDescriptions\":[{\"Name\":\"GEST_12_RANK_2\",\"ClassMaps\":{\"1\":\"8\",\"2\":\"ccw\",\"3\":\"cw\",\"4\":\"idle\",\"5\":\"left\",\"6\":\"right\",\"7\":\"tap\",\"0\":\"Unknown\"},\"ModelType\":\"PME\",\"FeatureFunctions\":[\"25thPercentile\",\"25thPercentile\",\"75thPercentile\",\"75thPercentile\",\"AbsoluteAreaofHighFrequency\",\"AbsoluteAreaofHighFrequency\",\"AbsoluteAreaofSpectrum\",\"AbsoluteAreaofSpectrum\",\"AbsoluteMean\",\"GlobalMinMaxSum\",\"GlobalPeaktoPeak\",\"GlobalPeaktoPeak\",\"GlobalPeaktoPeakofHighFrequency\",\"InterquartileRange\",\"Kurtosis\",\"LinearRegressionStats\",\"LinearRegressionStats\",\"LinearRegressionStats\",\"MinColumn\",\"Minimum\",\"Skewness\",\"StandardDeviation\",\"TotalArea\",\"TotalAreaofLowFrequency\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnPeakLocationDifference\",\"TwoColumnPeakLocationDifference\",\"TwoColumnPeakLocationDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"Variance\",\"Variance\",\"Variance\"]}]}"};
+
+int32_t recognition_model_string_json_len = sizeof(recognition_model_string_json);
+
+#endif /* __MODEL_JSON_H__ */
