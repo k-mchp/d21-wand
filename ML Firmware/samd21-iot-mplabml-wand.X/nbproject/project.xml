@@ -25,6 +25,8 @@
                 <sourceRootElem>../kps/kp_gest_11_1/application</sourceRootElem>
                 <sourceRootElem>../kps/kp_gest_12_2/application</sourceRootElem>
                 <sourceRootElem>../kps/kp_gest_12_2/mplabml</sourceRootElem>
+                <sourceRootElem>../kps/kp_gest_13_1/mplabml</sourceRootElem>
+                <sourceRootElem>../kps/kp_gest_13_1/application</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
