@@ -11,7 +11,7 @@ This repository contains the firmware to classify a Fall activity detection on a
 The supported activities are:
 
 - *Figure 8*
-- *Front Tap
+- *Front Tap*
 - *CCW Circle*
 - *CW Circle*
 - *Left Swipe*
