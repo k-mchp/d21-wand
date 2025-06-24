@@ -73,7 +73,7 @@ Gestures should be performed in a way that feels natural, using a thumb and inde
 ## Classifier Performance
 Below is the confusion matrix for the test dataset. Note that the classes are imbalanced so accuracy is not a good indicator of overall performance.
 
-![Test set confusion matrix](assets/wand-model-validation.png)
+![Test set confusion matrix](assets/matrix_gest3_rank4.png)
 
 # Sensor Configuration
 Binary builds of the data logging firmware used in the data collection for this project can be found in the [binaries](https://github.com/MicrochipTech/ml-samd21-iot-mplabml-gestures-demo/tree/main/binaries) folder of this repo; see the [ml-samd21-iot-imu-data-logger](https://github.com/MicrochipTech/ml-samd21-iot-imu-data-logger) repository to build data logging firmware with different sensor configurations.
