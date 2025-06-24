@@ -2,7 +2,7 @@
 # Wand Gestures with MPLAB® Machine Learning Development Suite
 | ![Dall Detection](assets/Wand_Gestures.png) |
 | :--: |
-| Fall Activity recognizer |
+| Wand Gesture Recognizer |
 
 ## Repository Overview
 This repository contains the firmware to classify a Fall activity detection on a SAMD21 Machine Learning Kit with the [Bosch BMI160 IMU](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A)
@@ -10,8 +10,12 @@ This repository contains the firmware to classify a Fall activity detection on a
 
 The supported activities are:
 
-- *Fall Activity*
-- *Normal Activity*
+- *Figure 8*
+- *Front Tap
+- *CCW Circle*
+- *CW Circle*
+- *Left Swipe*
+- *Right Swipe*
 - *Idle*
 
 In addition there is also an 'unknown' class for gesture-like movement and an 'idle' class for low motion activity.
