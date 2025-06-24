@@ -5,7 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="application" displayName="application" projectFiles="true">
-        <itemPath>../application/sml_recognition_run.h</itemPath>
+        <itemPath>../kps/kp_gest10_0/application/sml_recognition_run.h</itemPath>
       </logicalFolder>
       <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
         <itemPath>../bmi160/bmi160.h</itemPath>
@@ -118,40 +118,41 @@
       </logicalFolder>
       <logicalFolder name="mplabml" displayName="mplabml" projectFiles="true">
         <logicalFolder name="inc" displayName="inc" projectFiles="true">
-          <itemPath>../mplabml/inc/kb.h</itemPath>
-          <itemPath>../mplabml/inc/kb_defines.h</itemPath>
-          <itemPath>../mplabml/inc/kb_output.h</itemPath>
-          <itemPath>../mplabml/inc/kb_typedefs.h</itemPath>
-          <itemPath>../mplabml/inc/model_json.h</itemPath>
-          <itemPath>../mplabml/inc/testdata.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/inc/kb.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/inc/kb_defines.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/inc/kb_output.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/inc/kb_typedefs.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/inc/model_json.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/inc/testdata.h</itemPath>
         </logicalFolder>
         <logicalFolder name="lib" displayName="lib" projectFiles="true">
         </logicalFolder>
         <logicalFolder name="src" displayName="src" projectFiles="true">
-          <itemPath>../mplabml/src/fftr.h</itemPath>
-          <itemPath>../mplabml/src/fftr_utils.h</itemPath>
-          <itemPath>../mplabml/src/fixlog.h</itemPath>
-          <itemPath>../mplabml/src/imfcc.h</itemPath>
-          <itemPath>../mplabml/src/imfcc_rom.h</itemPath>
-          <itemPath>../mplabml/src/kb.h</itemPath>
-          <itemPath>../mplabml/src/kbalgorithms.h</itemPath>
-          <itemPath>../mplabml/src/kbutils.h</itemPath>
-          <itemPath>../mplabml/src/kb_classifier.h</itemPath>
-          <itemPath>../mplabml/src/kb_common.h</itemPath>
-          <itemPath>../mplabml/src/kb_defines.h</itemPath>
-          <itemPath>../mplabml/src/kb_opt.h</itemPath>
-          <itemPath>../mplabml/src/kb_output.h</itemPath>
-          <itemPath>../mplabml/src/kb_pipeline.h</itemPath>
-          <itemPath>../mplabml/src/kb_post_processing.h</itemPath>
-          <itemPath>../mplabml/src/kb_typedefs.h</itemPath>
-          <itemPath>../mplabml/src/model_json.h</itemPath>
-          <itemPath>../mplabml/src/rb.h</itemPath>
-          <itemPath>../mplabml/src/sml_profile_utils.h</itemPath>
-          <itemPath>../mplabml/src/testdata.h</itemPath>
-          <itemPath>../mplabml/src/tree_ensemble.h</itemPath>
-          <itemPath>../mplabml/src/tree_ensemble_trained_models.h</itemPath>
-          <itemPath>../mplabml/src/vad_silk.h</itemPath>
-          <itemPath>../mplabml/src/vad_webrtc.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/Makefile</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fftr.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fftr_utils.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fixlog.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/imfcc.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/imfcc_rom.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_classifier.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_common.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_defines.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_opt.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_output.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_pipeline.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_post_processing.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_typedefs.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kbalgorithms.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kbutils.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/model_json.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/rb.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/sml_profile_utils.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/testdata.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/tree_ensemble.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/tree_ensemble_trained_models.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/vad_silk.h</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/vad_webrtc.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -321,7 +322,7 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="application" displayName="application" projectFiles="true">
-        <itemPath>../application/sml_recognition_run.c</itemPath>
+        <itemPath>../kps/kp_gest10_0/application/sml_recognition_run.c</itemPath>
       </logicalFolder>
       <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
         <itemPath>../bmi160/bmi160.c</itemPath>
@@ -430,76 +431,99 @@
         <logicalFolder name="lib" displayName="lib" projectFiles="true">
         </logicalFolder>
         <logicalFolder name="src" displayName="src" projectFiles="true">
-          <itemPath>../mplabml/src/array_contains.c</itemPath>
-          <itemPath>../mplabml/src/calc_area.c</itemPath>
-          <itemPath>../mplabml/src/column_to_row_complex.c</itemPath>
-          <itemPath>../mplabml/src/crossing_rate.c</itemPath>
-          <itemPath>../mplabml/src/dsp_dtw_distance.c</itemPath>
-          <itemPath>../mplabml/src/dsp_l1_distance.c</itemPath>
-          <itemPath>../mplabml/src/dsp_lsup_distance.c</itemPath>
-          <itemPath>../mplabml/src/fftr.c</itemPath>
-          <itemPath>../mplabml/src/fftr_utils.c</itemPath>
-          <itemPath>../mplabml/src/fg_frequency_mfe.c</itemPath>
-          <itemPath>../mplabml/src/fg_frequency_peak_harmonic_product_spectrum.c</itemPath>
-          <itemPath>../mplabml/src/fg_frequency_power_spectrum.c</itemPath>
-          <itemPath>../mplabml/src/fg_frequency_spectral_entropy.c</itemPath>
-          <itemPath>../mplabml/src/fg_peak_frequencies.c</itemPath>
-          <itemPath>../mplabml/src/fixlog.c</itemPath>
-          <itemPath>../mplabml/src/imfcc.c</itemPath>
-          <itemPath>../mplabml/src/kb.c</itemPath>
-          <itemPath>../mplabml/src/kb_output.c</itemPath>
-          <itemPath>../mplabml/src/kb_pipeline.c</itemPath>
-          <itemPath>../mplabml/src/kb_post_processing.c</itemPath>
-          <itemPath>../mplabml/src/max_min_high_low_freq.c</itemPath>
-          <itemPath>../mplabml/src/ma_symmetric.c</itemPath>
-          <itemPath>../mplabml/src/mean.c</itemPath>
-          <itemPath>../mplabml/src/ratio_diff_impl.c</itemPath>
-          <itemPath>../mplabml/src/rb.c</itemPath>
-          <itemPath>../mplabml/src/save_sensor_data.c</itemPath>
-          <itemPath>../mplabml/src/sf_downsample_by_averaging.c</itemPath>
-          <itemPath>../mplabml/src/sf_downsample_by_decimation.c</itemPath>
-          <itemPath>../mplabml/src/sg_windowing.c</itemPath>
-          <itemPath>../mplabml/src/sortarray.c</itemPath>
-          <itemPath>../mplabml/src/sorted_copy.c</itemPath>
-          <itemPath>../mplabml/src/stats_percentile_presorted.c</itemPath>
-          <itemPath>../mplabml/src/stat_mean.c</itemPath>
-          <itemPath>../mplabml/src/stat_moment.c</itemPath>
-          <itemPath>../mplabml/src/std.c</itemPath>
-          <itemPath>../mplabml/src/st_absolute_average.c</itemPath>
-          <itemPath>../mplabml/src/st_average.c</itemPath>
-          <itemPath>../mplabml/src/st_high_pass_filter.c</itemPath>
-          <itemPath>../mplabml/src/st_moving_average.c</itemPath>
-          <itemPath>../mplabml/src/sum.c</itemPath>
-          <itemPath>../mplabml/src/tree_ensemble.c</itemPath>
-          <itemPath>../mplabml/src/tree_ensemble_trained_models.c</itemPath>
-          <itemPath>../mplabml/src/tr_min_max_scale.c</itemPath>
-          <itemPath>../mplabml/src/utils_array.c</itemPath>
-          <itemPath>../mplabml/src/utils_array_max_uint8.c</itemPath>
-          <itemPath>../mplabml/src/utils_bitwise_abs_val.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_absmean.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_abssum.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_abs_max.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_argmax.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_autoscale.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_cumsum.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_max.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_mean.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_median.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_min.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_min_max.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_pass_threshold.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_std.c</itemPath>
-          <itemPath>../mplabml/src/utils_buffer_variance.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_crossing_rate.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_cross_column.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_cross_difference.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_mean_crossing_rate.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_pct_time_over_sigma.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_pct_time_over_threshold.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_stats_max_min.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_total_area.c</itemPath>
-          <itemPath>../mplabml/src/utils_model_total_energy.c</itemPath>
-          <itemPath>../mplabml/src/utils_tr_sensor.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/array_contains.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/calc_area.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/column_to_row_complex.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/crossing_rate.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/dsp_dtw_distance.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/dsp_l1_distance.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/dsp_lsup_distance.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fftr.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fftr_utils.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_amplitude_global_p2p_low_frequency.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_amplitude_peak_to_peak.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_area_absolute_area_low_frequency.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_area_power_spectrum_density.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_area_total_area.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_area_total_area_low_frequency.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_cross_max_column.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_cross_mean_difference.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_cross_median_difference.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_cross_min_column.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_cross_p2p_difference.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_cross_peak_location_difference.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_frequency_harmonic_product_spectrum.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_frequency_mfe.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_frequency_power_spectrum.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_frequency_spectral_entropy.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_abs_mean.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_iqr.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_linear_regression.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_maximum.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_minimum.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_pct025.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_pct075.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_skewness.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_stats_variance.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_time_average_time_over_threshold.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fg_time_pct_time_over_zero.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/fixlog.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/imfcc.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_output.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_pipeline.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/kb_post_processing.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/max_min_high_low_freq.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/ma_symmetric.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/mean.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/ratio_diff_impl.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/rb.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/save_sensor_data.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/sf_downsample_by_averaging.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/sf_downsample_by_decimation.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/sg_windowing.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/sortarray.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/sorted_copy.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/stats_percentile_presorted.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/stat_mean.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/stat_moment.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/std.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/st_absolute_average.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/st_average.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/st_high_pass_filter.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/st_moving_average.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/sum.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/tree_ensemble.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/tree_ensemble_trained_models.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/tr_min_max_scale.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/tr_sensor_magnitude.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_array.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_array_max_uint8.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_bitwise_abs_val.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_absmean.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_abssum.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_abs_max.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_argmax.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_autoscale.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_cumsum.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_max.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_mean.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_median.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_min.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_min_max.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_pass_threshold.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_std.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_buffer_variance.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_crossing_rate.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_cross_column.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_cross_difference.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_mean_crossing_rate.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_pct_time_over_sigma.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_pct_time_over_threshold.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_stats_max_min.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_total_area.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_model_total_energy.c</itemPath>
+          <itemPath>../kps/kp_gest10_0/mplabml/src/utils_tr_sensor.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -514,6 +538,8 @@
     <Elem>../knowledgepack</Elem>
     <Elem>../application</Elem>
     <Elem>../mplabml</Elem>
+    <Elem>../kps/kp_gest10_0/mplabml</Elem>
+    <Elem>../kps/kp_gest10_0/application</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

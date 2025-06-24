@@ -19,6 +19,8 @@
                 <sourceRootElem>../knowledgepack</sourceRootElem>
                 <sourceRootElem>../application</sourceRootElem>
                 <sourceRootElem>../mplabml</sourceRootElem>
+                <sourceRootElem>../kps/kp_gest10_0/mplabml</sourceRootElem>
+                <sourceRootElem>../kps/kp_gest10_0/application</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
