@@ -1,0 +1,17 @@
+build/SAMD21_IOT_WG_ICM42688/debug/_ext/903556193/Icm426xxDriver_HL_apex.o: \
+ ../src/Icm426xx/Icm426xxDriver_HL_apex.c ../src/Icm426xx/Icm426xxDefs.h \
+ ../src/Icm426xx/Icm426xxExtFunc.h ../src/Icm426xx/Icm426xxDriver_HL.h \
+ ../src/Icm426xx/Icm426xxTransport.h ../src/Icm426xx/InvError.h \
+ ../src/Icm426xx/Icm426xxDriver_HL_apex.h
+
+../src/Icm426xx/Icm426xxDefs.h:
+
+../src/Icm426xx/Icm426xxExtFunc.h:
+
+../src/Icm426xx/Icm426xxDriver_HL.h:
+
+../src/Icm426xx/Icm426xxTransport.h:
+
+../src/Icm426xx/InvError.h:
+
+../src/Icm426xx/Icm426xxDriver_HL_apex.h:
