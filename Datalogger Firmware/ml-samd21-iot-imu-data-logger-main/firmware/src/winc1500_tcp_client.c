@@ -138,7 +138,7 @@ static void TCP_Client_SocketEventCallback(SOCKET socket, uint8_t messageType, v
         case SOCKET_MSG_SEND:
         {
             //printf("Socket %d send completed\r\n", socket);
-            //printf("*");
+            printf("*");
             state = TCP_CLIENT_READY_TO_SEND;
             break;
         }

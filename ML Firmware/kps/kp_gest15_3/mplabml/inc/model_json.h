@@ -1,0 +1,8 @@
+#ifndef __MODEL_JSON_H__
+#define __MODEL_JSON_H__
+
+const char recognition_model_string_json[] = {"{\"NumModels\":1,\"ModelIndexes\":{\"0\":\"GEST_15_RANK_3\"},\"ModelDescriptions\":[{\"Name\":\"GEST_15_RANK_3\",\"ClassMaps\":{\"1\":\"8\",\"2\":\"ccw\",\"3\":\"cw\",\"4\":\"idle\",\"5\":\"left\",\"6\":\"right\",\"7\":\"tap\",\"0\":\"Unknown\"},\"ModelType\":\"DecisionTreeEnsemble\",\"FeatureFunctions\":[\"25thPercentile\",\"25thPercentile\",\"75thPercentile\",\"75thPercentile\",\"AbsoluteAreaofHighFrequency\",\"AbsoluteAreaofHighFrequency\",\"AbsoluteAreaofSpectrum\",\"AbsoluteAreaofSpectrum\",\"AbsoluteMean\",\"DownsampleMaxWithNormaliztion\",\"DownsampleMaxWithNormaliztion\",\"DownsampleMaxWithNormaliztion\",\"DownsampleMaxWithNormaliztion\",\"DownsampleMaxWithNormaliztion\",\"DownsampleMaxWithNormaliztion\",\"GlobalMinMaxSum\",\"GlobalPeaktoPeak\",\"GlobalPeaktoPeakofHighFrequency\",\"InterquartileRange\",\"Kurtosis\",\"Kurtosis\",\"LinearRegressionStats\",\"LinearRegressionStats\",\"LinearRegressionStats\",\"Minimum\",\"Skewness\",\"StandardDeviation\",\"TotalAreaofLowFrequency\",\"TotalAreaofLowFrequency\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnMeanDifference\",\"TwoColumnMedianDifference\",\"TwoColumnMedianDifference\",\"TwoColumnPeakLocationDifference\",\"TwoColumnPeakLocationDifference\",\"TwoColumnPeakLocationDifference\",\"TwoColumnPeakToPeakDifference\",\"TwoColumnPeakToPeakDifference\",\"Variance\",\"Variance\",\"Variance\"]}]}"};
+
+int32_t recognition_model_string_json_len = sizeof(recognition_model_string_json);
+
+#endif /* __MODEL_JSON_H__ */
