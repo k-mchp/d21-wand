@@ -75,7 +75,7 @@ Below is the confusion matrix for the test dataset. Note that the classes are im
 
 ![Test set confusion matrix](assets/matrix_gest3_rank4.png)
 
-Below is the feature vector plot for the test dataset. Note that the grouping is tight in this SVM model and there is good seperation between clusters.
+Below is the feature vector plot for the test dataset. Note that the grouping is tight in this SVM model and there is good seperation between clusters (except for CCW and CW circle).  CCW and CW will probably get false positives and false negative with this model; however, the other actions should have a high accuracy of classifying correctly.
 
 ![Test set Feature Vector Plot](assets/Feature_Vector_Plot.png)
 
