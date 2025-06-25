@@ -75,6 +75,10 @@ Below is the confusion matrix for the test dataset. Note that the classes are im
 
 ![Test set confusion matrix](assets/matrix_gest3_rank4.png)
 
+Below is the feature vector plot for the test dataset. Note that the grouping is tight in this SVM model and there is good seperation between clusters.
+
+![Test set Feature Vector Plot](assets/Feature_Vector_Plot.png)
+
 # Sensor Configuration
 Binary builds of the data logging firmware used in the data collection for this project can be found in the [binaries](https://github.com/MicrochipTech/ml-samd21-iot-mplabml-gestures-demo/tree/main/binaries) folder of this repo; see the [ml-samd21-iot-imu-data-logger](https://github.com/MicrochipTech/ml-samd21-iot-imu-data-logger) repository to build data logging firmware with different sensor configurations.
 
