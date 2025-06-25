@@ -29,6 +29,8 @@
 
 #include "app.h"
 #include "wdrv_winc_client_api.h"
+#include "app_config.h"
+
 void TCP_Client_Initialize(DRV_HANDLE handle);
 void TCP_Client_Tasks(DRV_HANDLE handle);
 // *****************************************************************************
@@ -110,17 +112,19 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
-            
+            #if STREAM_FORMAT_IS(WIFI)  
             if (SYS_STATUS_READY == WDRV_WINC_Status(sysObj.drvWifiWinc))
             {
                 appData.state = APP_STATE_WDRV_INIT_READY;
             }
+            #endif
 
             break;
         }
 
         case APP_STATE_WDRV_INIT_READY:
         {
+            #if STREAM_FORMAT_IS(WIFI)
             wdrvHandle = WDRV_WINC_Open(0, 0);
 
             if (DRV_HANDLE_INVALID != wdrvHandle)
@@ -128,12 +132,15 @@ void APP_Tasks ( void )
                 TCP_Client_Initialize(wdrvHandle);
                 appData.state = APP_STATE_WDRV_OPEN;
             }
+            #endif
             break;
         }
 
         case APP_STATE_WDRV_OPEN:
-        {
+        {   
+            #if STREAM_FORMAT_IS(WIFI)
             TCP_Client_Tasks(wdrvHandle);
+            #endif
             break;
         }
 

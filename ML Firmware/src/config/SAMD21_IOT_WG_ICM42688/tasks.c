@@ -53,6 +53,7 @@
 #include "configuration.h"
 #include "definitions.h"
 #include "sys_tasks.h"
+#include "app_config.h"
 
 
 
@@ -76,8 +77,10 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Device Drivers */
+    
+    #if STREAM_FORMAT_IS(WIFI)
         WDRV_WINC_Tasks(sysObj.drvWifiWinc);
-
+    #endif
 
 
 

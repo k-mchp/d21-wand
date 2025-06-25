@@ -71,16 +71,20 @@ void SERCOM5_USART_Initialize( void );
 
 bool SERCOM5_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFrequency );
 
+void SERCOM5_USART_Enable( void );
+
+void SERCOM5_USART_Disable( void );
+
 void SERCOM5_USART_TransmitterEnable( void );
 
 void SERCOM5_USART_TransmitterDisable( void );
 
 bool SERCOM5_USART_Write( void *buffer, const size_t size );
 
+bool SERCOM5_USART_TransmitComplete( void );
+
 
 bool SERCOM5_USART_TransmitterIsReady( void );
-
-bool SERCOM5_USART_TransmitComplete( void );
 
 void SERCOM5_USART_WriteByte( int data );
 
@@ -98,6 +102,7 @@ int SERCOM5_USART_ReadByte( void );
 USART_ERROR SERCOM5_USART_ErrorGet( void );
 
 uint32_t SERCOM5_USART_FrequencyGet( void );
+
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

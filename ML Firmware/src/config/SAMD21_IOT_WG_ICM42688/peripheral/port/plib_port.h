@@ -113,6 +113,40 @@
 #define LED_YELLOW_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 11U)) & 0x01U)
 #define LED_YELLOW_PIN                  PORT_PIN_PA11
 
+/*** Macros for WDRV_WINC_RESETN pin ***/
+#define WDRV_WINC_RESETN_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 10U))
+#define WDRV_WINC_RESETN_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 10U))
+#define WDRV_WINC_RESETN_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 10U))
+#define WDRV_WINC_RESETN_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 10U))
+#define WDRV_WINC_RESETN_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 10U))
+#define WDRV_WINC_RESETN_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 10U)) & 0x01U)
+#define WDRV_WINC_RESETN_PIN                  PORT_PIN_PB10
+
+/*** Macros for WDRV_WINC_CHIP_EN pin ***/
+#define WDRV_WINC_CHIP_EN_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 11U))
+#define WDRV_WINC_CHIP_EN_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 11U))
+#define WDRV_WINC_CHIP_EN_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 11U))
+#define WDRV_WINC_CHIP_EN_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 11U))
+#define WDRV_WINC_CHIP_EN_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 11U))
+#define WDRV_WINC_CHIP_EN_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 11U)) & 0x01U)
+#define WDRV_WINC_CHIP_EN_PIN                  PORT_PIN_PB11
+
+/*** Macros for S2_WINC_SPI_MOSI pin ***/
+#define S2_WINC_SPI_MOSI_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 12U)) & 0x01U)
+#define S2_WINC_SPI_MOSI_PIN                  PORT_PIN_PA12
+
+/*** Macros for S2_WINC_SPI_SCK pin ***/
+#define S2_WINC_SPI_SCK_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 13U)) & 0x01U)
+#define S2_WINC_SPI_SCK_PIN                  PORT_PIN_PA13
+
+/*** Macros for S2_WINC_SPI_CS pin ***/
+#define S2_WINC_SPI_CS_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 14U)) & 0x01U)
+#define S2_WINC_SPI_CS_PIN                  PORT_PIN_PA14
+
+/*** Macros for S2_WINC_SPI_MISO pin ***/
+#define S2_WINC_SPI_MISO_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 15U)) & 0x01U)
+#define S2_WINC_SPI_MISO_PIN                  PORT_PIN_PA15
+
 /*** Macros for S1_MBUS_I2C_SDA_PA16 pin ***/
 #define S1_MBUS_I2C_SDA_PA16_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 16U)) & 0x01U)
 #define S1_MBUS_I2C_SDA_PA16_PIN                  PORT_PIN_PA16
@@ -120,6 +154,10 @@
 /*** Macros for S1_MBUS_I2C_SCL_PA17 pin ***/
 #define S1_MBUS_I2C_SCL_PA17_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 17U)) & 0x01U)
 #define S1_MBUS_I2C_SCL_PA17_PIN                  PORT_PIN_PA17
+
+/*** Macros for WINC_INT pin ***/
+#define WINC_INT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 18U)) & 0x01U)
+#define WINC_INT_PIN                  PORT_PIN_PA18
 
 /*** Macros for LED_GREEN pin ***/
 #define LED_GREEN_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 20U))
@@ -139,9 +177,9 @@
 #define LED_BLUE_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 21U)) & 0x01U)
 #define LED_BLUE_PIN                  PORT_PIN_PA21
 
-/*** Macros for MIRKO_INT pin ***/
-#define MIRKO_INT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 24U)) & 0x01U)
-#define MIRKO_INT_PIN                  PORT_PIN_PA24
+/*** Macros for MIKRO_INT pin ***/
+#define MIKRO_INT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 24U)) & 0x01U)
+#define MIKRO_INT_PIN                  PORT_PIN_PA24
 
 /*** Macros for LED_RED pin ***/
 #define LED_RED_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 25U))
@@ -191,7 +229,7 @@
 #define GET_PORT_GROUP(pin)  ((PORT_GROUP)(PORT_BASE_ADDRESS + (0x80U * (((uint32_t)pin) >> 5U))))
 #define GET_PIN_MASK(pin)   (((uint32_t)(0x1U)) << (((uint32_t)pin) & 0x1FU))
 
-/* Named type for port group */ 
+/* Named type for port group */
 typedef uint32_t PORT_GROUP;
 
 
@@ -355,7 +393,6 @@ typedef enum
 // Section: Generated API based on pin configurations done in Pin Manager
 // *****************************************************************************
 // *****************************************************************************
-
 // *****************************************************************************
 /* Function:
     void PORT_Initialize(void)

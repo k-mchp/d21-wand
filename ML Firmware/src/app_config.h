@@ -33,6 +33,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
 
 // *****************************************************************************
 // *****************************************************************************
@@ -48,6 +49,11 @@
 // Dump data to uart in form suitable for MPLAB DV plugin
 #define DATA_STREAMER_FORMAT_MDV        2
 
+// Dump data to uart in form suitable for SensiMLs Data Capture Lab (simple stream format)
+#define DATA_STREAMER_FORMAT_SMLSS      3
+
+//Choose this if you want to transmit data through wifi
+#define DATA_STREAMER_FORMAT_WIFI       4
 // *****************************************************************************
 // *****************************************************************************
 // Section: User configurable application level parameters
@@ -56,13 +62,13 @@
 
 // Data streaming formatting selection
 #ifndef DATA_STREAMER_FORMAT
-#define DATA_STREAMER_FORMAT    DATA_STREAMER_FORMAT_ASCII
+#define DATA_STREAMER_FORMAT    DATA_STREAMER_FORMAT_NONE
 #endif
 
 // IMU sampling rate in units of SNSR_SAMPLE_RATE_UNIT
 // For BMI160:
 //  - set SNSR_SAMPLE_RATE to one of: 25, 50, 100, 200, 400, 800, 1600
-// For ICM42688 < 1kHz range:
+// For ICM42688:
 //  - set SNSR_SAMPLE_RATE to one of: 25, 50, 100, 200, 500, 1000, 2000, 4000, 8000, 16000
 // !NB! Increasing the sample rate above 500Hz (this may be lower for non MDV formats)
 // with all 6 axes may cause buffer overruns
@@ -79,15 +85,11 @@
 #define SNSR_GYRO_RANGE         2000
 
 // Define which axes from the IMU to use
-#define SNSR_USE_ACCEL_X        true
-#define SNSR_USE_ACCEL_Y        true
-#define SNSR_USE_ACCEL_Z        true
-#define SNSR_USE_GYRO_X         true
-#define SNSR_USE_GYRO_Y         true
-#define SNSR_USE_GYRO_Z         true
+#define SNSR_USE_ACCEL          true
+#define SNSR_USE_GYRO           true
 
 // Size of sensor buffer in samples (must be power of 2)
-#define SNSR_BUF_LEN            32
+#define SNSR_BUF_LEN            128
 
 // Type used to store and stream sensor samples
 #define SNSR_DATA_TYPE          int16_t
@@ -95,7 +97,15 @@
 // Frame header byte for MPLAB DV
 #define MDV_START_OF_FRAME      0xA5U
 
+// SensiML specific parameters
+#if (DATA_STREAMER_FORMAT == DATA_STREAMER_FORMAT_SMLSS)
+#define SML_MAX_CONFIG_STRLEN   256
+#define SNSR_SAMPLES_PER_PACKET 8  // must be factor of SNSR_BUF_LEN
+#define SSI_JSON_CONFIG_VERSION 2  // 2 => Use enhance SSI protocol,
+                                   // 1 => use original SSI protocol
+#else
 #define SNSR_SAMPLES_PER_PACKET 1
+#endif
 
 // LED tick rate periods in ms
 #define TICK_RATE_FAST          100
@@ -106,12 +116,9 @@
 // Section: Defines derived from user config parameters
 // *****************************************************************************
 // *****************************************************************************
-#define SNSR_NUM_AXES   (SNSR_USE_ACCEL_X + SNSR_USE_ACCEL_Y + SNSR_USE_ACCEL_Z \
-                            + SNSR_USE_GYRO_X + SNSR_USE_GYRO_Y + SNSR_USE_GYRO_Z)
+#define SNSR_NUM_AXES   (3*SNSR_USE_ACCEL + 3*SNSR_USE_GYRO)
 
 /* Define whether multiple sensors types are being used */
-#define SNSR_USE_GYRO   (SNSR_USE_GYRO_X || SNSR_USE_GYRO_Y || SNSR_USE_GYRO_Z)
-#define SNSR_USE_ACCEL  (SNSR_USE_ACCEL_X || SNSR_USE_ACCEL_Y || SNSR_USE_ACCEL_Z)
 #if (SNSR_USE_ACCEL && SNSR_USE_GYRO)
     #define MULTI_SENSOR 1
 #else
@@ -181,6 +188,8 @@
 #define TC_TimerStart                   TC3_TimerStart
 #define TC_TimerGet_us                  TC3_Timer16bitCounterGet
 #define TC_TimerCallbackRegister(cb)    TC3_TimerCallbackRegister(cb, (uintptr_t) NULL)
+size_t __attribute__(( unused )) UART_Read(uint8_t *ptr, const size_t nbytes);
+size_t __attribute__(( unused )) UART_Write(uint8_t *ptr, const size_t nbytes);
 
 #ifdef	__cplusplus
 extern "C" {
