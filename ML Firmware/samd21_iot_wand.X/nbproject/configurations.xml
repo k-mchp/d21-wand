@@ -753,6 +753,8 @@
     <Elem>../kps/37_0/mplabml</Elem>
     <Elem>../kps/38_3/application</Elem>
     <Elem>../kps/38_3/mplabml</Elem>
+    <Elem>../kps/39_2/application</Elem>
+    <Elem>../kps/39_2/mplabml</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

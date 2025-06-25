@@ -261,6 +261,8 @@ int main ( void )
         ssi_build_json_config(json_config_str, SML_MAX_CONFIG_STRLEN);
 #endif
  
+        
+    #if STREAM_FORMAT_IS(NONE)    
         /* Initialize MPLAB ML Knowledge Pack */
         kb_model_init();
         //sml_output_init(NULL);
@@ -276,6 +278,7 @@ int main ( void )
         }
         printf("%02x", *ptr++); 
         printf("\n");        
+    #endif
 
         /* Activate External Interrupt Controller for sensor capture */
         MIKRO_INT_CallbackRegister(SNSR_ISR_HANDLER);
@@ -395,6 +398,8 @@ int main ( void )
          else {
             ringbuffer_size_t rdcnt;
             snsr_dataframe_t const *ptr = ringbuffer_get_read_buffer(&snsr_buffer, &rdcnt);
+            
+        #if STREAM_FORMAT_IS(NONE)
             while (rdcnt--) {
                 snsr_status = false;
                 int ret = sml_recognition_run((snsr_data_t *) ptr++, SNSR_NUM_AXES);
@@ -406,7 +411,9 @@ int main ( void )
                     clsid = ret; // Assign class ID
                     (void) clsid;
                 }
-            }
+            }            
+        #endif
+
         }       
 
 #if STREAM_FORMAT_IS(SMLSS)
