@@ -62,7 +62,7 @@
 // *****************************************************************************
 // *****************************************************************************
 /* EIC Channel Callback object */
-EIC_CALLBACK_OBJ    eicCallbackObject[EXTINT_COUNT];
+volatile static EIC_CALLBACK_OBJ    eicCallbackObject[EXTINT_COUNT];
 
 
 void EIC_Initialize(void)
@@ -81,7 +81,7 @@ void EIC_Initialize(void)
     /* Interrupt sense type and filter control for EXTINT channels 0 to 7 */
     EIC_REGS->EIC_CONFIG[0] = EIC_CONFIG_SENSE0_RISE | EIC_CONFIG_FILTEN0_Msk |
                               EIC_CONFIG_SENSE1_NONE  |
-                              EIC_CONFIG_SENSE2_NONE  |
+                              EIC_CONFIG_SENSE2_FALL  |
                               EIC_CONFIG_SENSE3_NONE  |
                               EIC_CONFIG_SENSE4_NONE  |
                               EIC_CONFIG_SENSE5_NONE  |
@@ -99,12 +99,12 @@ void EIC_Initialize(void)
                               EIC_CONFIG_SENSE7_NONE ;
 
     /* External Interrupt enable*/
-    EIC_REGS->EIC_INTENSET = 0x1000;
+    EIC_REGS->EIC_INTENSET = 0x1004;
 
     /* Callbacks for enabled interrupts */
     eicCallbackObject[0].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[1].eicPinNo = EIC_PIN_MAX;
-    eicCallbackObject[2].eicPinNo = EIC_PIN_MAX;
+    eicCallbackObject[2].eicPinNo = EIC_PIN_2;
     eicCallbackObject[3].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[4].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[5].eicPinNo = EIC_PIN_MAX;
@@ -130,12 +130,12 @@ void EIC_Initialize(void)
 
 void EIC_InterruptEnable(EIC_PIN pin)
 {
-    EIC_REGS->EIC_INTENSET = (1UL << pin);
+    EIC_REGS->EIC_INTENSET = (1UL << (uint32_t)pin);
 }
 
 void EIC_InterruptDisable(EIC_PIN pin)
 {
-    EIC_REGS->EIC_INTENCLR = (1UL << pin);
+    EIC_REGS->EIC_INTENCLR = (1UL << (uint32_t)pin);
 }
 
 void EIC_CallbackRegister(EIC_PIN pin, EIC_CALLBACK callback, uintptr_t context)
@@ -148,26 +148,27 @@ void EIC_CallbackRegister(EIC_PIN pin, EIC_CALLBACK callback, uintptr_t context)
     }
 }
 
-void EIC_InterruptHandler(void)
+void __attribute__((used)) EIC_InterruptHandler(void)
 {
-    uint8_t currentChannel = 0;
-    uint32_t eicIntFlagStatus = 0;
+    uint8_t currentChannel;
+    uint32_t eicIntFlagStatus;
 
     /* Find any triggered channels, run associated callback handlers */
     for (currentChannel = 0; currentChannel < EXTINT_COUNT; currentChannel++)
     {
         /* Verify if the EXTINT x Interrupt Pin is enabled */
-        if ((eicCallbackObject[currentChannel].eicPinNo == currentChannel))
+        if (((uint8_t)eicCallbackObject[currentChannel].eicPinNo == currentChannel))
         {
             /* Read the interrupt flag status */
             eicIntFlagStatus = EIC_REGS->EIC_INTFLAG & (1UL << currentChannel);
 
-            if (eicIntFlagStatus)
+            if (eicIntFlagStatus != 0U)
             {
                 /* Find any associated callback entries in the callback table */
                 if ((eicCallbackObject[currentChannel].callback != NULL))
                 {
-                    eicCallbackObject[currentChannel].callback(eicCallbackObject[currentChannel].context);
+                    uintptr_t context = eicCallbackObject[currentChannel].context;
+                    eicCallbackObject[currentChannel].callback(context);
                 }
 
                 /* Clear interrupt flag */

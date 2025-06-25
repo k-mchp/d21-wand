@@ -59,6 +59,7 @@
 #include "peripheral/sercom/usart/plib_sercom5_usart.h"
 #include "peripheral/eic/plib_eic.h"
 #include "peripheral/tc/plib_tc3.h"
+#include "peripheral/sercom/spi_master/plib_sercom0_spi_master.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
