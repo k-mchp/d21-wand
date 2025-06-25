@@ -14,6 +14,7 @@ build/SAMD21_IOT_WG_BMI160/debug/_ext/465267638/plib_tc3.o: \
  ../src/packs/ATSAMD21G18A_DFP/component/dsu.h \
  ../src/packs/ATSAMD21G18A_DFP/component/eic.h \
  ../src/packs/ATSAMD21G18A_DFP/component/evsys.h \
+ ../src/packs/ATSAMD21G18A_DFP/component/fuses.h \
  ../src/packs/ATSAMD21G18A_DFP/component/gclk.h \
  ../src/packs/ATSAMD21G18A_DFP/component/hmatrixb.h \
  ../src/packs/ATSAMD21G18A_DFP/component/i2s.h \
@@ -37,6 +38,7 @@ build/SAMD21_IOT_WG_BMI160/debug/_ext/465267638/plib_tc3.o: \
  ../src/packs/ATSAMD21G18A_DFP/instance/dsu.h \
  ../src/packs/ATSAMD21G18A_DFP/instance/eic.h \
  ../src/packs/ATSAMD21G18A_DFP/instance/evsys.h \
+ ../src/packs/ATSAMD21G18A_DFP/instance/fuses.h \
  ../src/packs/ATSAMD21G18A_DFP/instance/gclk.h \
  ../src/packs/ATSAMD21G18A_DFP/instance/i2s.h \
  ../src/packs/ATSAMD21G18A_DFP/instance/mtb.h \
@@ -100,6 +102,8 @@ build/SAMD21_IOT_WG_BMI160/debug/_ext/465267638/plib_tc3.o: \
 
 ../src/packs/ATSAMD21G18A_DFP/component/evsys.h:
 
+../src/packs/ATSAMD21G18A_DFP/component/fuses.h:
+
 ../src/packs/ATSAMD21G18A_DFP/component/gclk.h:
 
 ../src/packs/ATSAMD21G18A_DFP/component/hmatrixb.h:
@@ -145,6 +149,8 @@ build/SAMD21_IOT_WG_BMI160/debug/_ext/465267638/plib_tc3.o: \
 ../src/packs/ATSAMD21G18A_DFP/instance/eic.h:
 
 ../src/packs/ATSAMD21G18A_DFP/instance/evsys.h:
+
+../src/packs/ATSAMD21G18A_DFP/instance/fuses.h:
 
 ../src/packs/ATSAMD21G18A_DFP/instance/gclk.h:
 
