@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/SAMD21_IOT_WG_ICM42688/production/samd21_iot_wand.X.production.elf">
+    <memory name="program">
+      <units>bytes</units>
+      <length>262144</length>
+      <used>108228</used>
+      <free>153916</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>32768</length>
+      <used>7068</used>
+      <free>25700</free>
+    </memory>
+  </executable>
+</project>
