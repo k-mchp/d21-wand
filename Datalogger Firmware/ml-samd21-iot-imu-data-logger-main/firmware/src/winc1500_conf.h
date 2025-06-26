@@ -46,13 +46,16 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #ifndef _WINC1500_CONF_H
 #define _WINC1500_CONF_H
 
-#define WLAN_SSID           "MCHP_demo_WINC"
-#define WLAN_AUTH_WPA_PSK
-//#define WLAN_AUTH_OPEN
+//#define WLAN_SSID           "MCHP_demo_WINC"
+#define WLAN_SSID             "MicrochipDemoAp"
+//#define WLAN_AUTH_WPA_PSK
+#define WLAN_AUTH_OPEN
 #define WLAN_PSK            "12345678"
 
-#define TCP_SERVER_IP_ADDR  "192.168.0.194"
-#define TCP_SERVER_PORT_NUM 12345
+//#define TCP_SERVER_IP_ADDR  "192.168.0.194"
+//#define TCP_SERVER_PORT_NUM 12345
+#define TCP_SERVER_IP_ADDR    "192.168.1.1"
+#define TCP_SERVER_PORT_NUM   6666
 
 #define TCP_BUFFER_SIZE     14
 //#define TCP_SEND_MESSAGE    "Hello from WINC module."
