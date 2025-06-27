@@ -9,21 +9,9 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
   name: core
   type: package
   version: v3.14.0
-- dependencyPackage: ''
-  name: csp
-  type: package
-  version: v3.20.0
-- dependencyPackage: ''
-  name: wireless_wifi
-  type: package
-  version: v3.12.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -34,8 +22,8 @@ data:
     - children:
       - attributes:
           id: drv_spi
-          x: '372'
-          y: '285'
+          x: '379'
+          y: '283'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

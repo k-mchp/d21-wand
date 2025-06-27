@@ -49,10 +49,10 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/sercom/spi_master/plib_sercom2_spi_master.h"
-#include "peripheral/sercom/spi_master/plib_sercom0_spi_master.h"
+#include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/evsys/plib_evsys.h"
+#include "peripheral/sercom/spi_master/plib_sercom0_spi_master.h"
 #include "driver/winc/include/wdrv_winc_api.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
@@ -62,8 +62,8 @@
 #include "peripheral/sercom/usart/plib_sercom5_usart.h"
 #include "peripheral/eic/plib_eic.h"
 #include "peripheral/tc/plib_tc3.h"
-#include "system/time/sys_time.h"
 #include "peripheral/tc/plib_tc4.h"
+#include "system/time/sys_time.h"
 #include "driver/spi/drv_spi.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"

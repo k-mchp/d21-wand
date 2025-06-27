@@ -190,6 +190,8 @@ size_t ssi_build_json_config(char json_config_str[], size_t maxlen)
 
 int main ( void )
 {
+    
+    
     int8_t app_failed = 0;
 #if STREAM_FORMAT_IS(SMLSS)
     uint32_t ssi_adtimer = 0;
@@ -215,6 +217,12 @@ int main ( void )
 
     /* Application init routine */
     app_failed = 1;
+    
+     ws2812_init();
+     ws2812_set_pixel(0, 255, 0, 0);
+    ws2812_show();
+    
+    
     while (1)
     {
         /* Initialize the sensor data buffer */
