@@ -257,9 +257,9 @@ void __attribute__((optimize("O2"))) ws2812_send_data(const uint8_t *data, size_
 //                __asm__ __volatile__(T1H_DELAY_ASM ::: "memory");
                 *clr_reg= pin_mask;
 //                __asm__ __volatile__(T1L_DELAY_ASM ::: "memory");
-                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
-                 _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
+                //_nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
+                 //_nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                //_nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
 //                _nop();_nop();_nop();_nop();_nop(); //5 nop's
                 
             } else {
@@ -272,11 +272,16 @@ void __attribute__((optimize("O2"))) ws2812_send_data(const uint8_t *data, size_
                 
                 *clr_reg = pin_mask;
 //                __asm__ __volatile__(T0L_DELAY_ASM ::: "memory");
-                _nop();_nop();_nop();_nop();//_nop();_nop();//_nop();_nop(); //8 nop's
-                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();//_nop();_nop();//_nop();_nop();//_nop();_nop(); //8 nop's
+               // _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                //_nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
                 _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
 //                _nop();_nop();_nop();_nop();_nop();_nop();
+            }
+            if ( bit >0)
+            {
+                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
             }
         }
     }
