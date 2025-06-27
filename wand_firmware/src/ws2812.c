@@ -42,6 +42,8 @@
 #define WS2812_T1L_CYCLES  7    // 22 * 0.329 ? 7 cycles (0.45?s with overhead)
 #define WS2812_RESET_CYCLES 790 // 50?s reset time (measured value)
 
+void __attribute__((optimize("O2"))) ws2812_send_data(const uint8_t *data, size_t len) ;
+
 /* ************************************************************************** */
 /* Global Variables                                                           */
 /* ************************************************************************** */
@@ -231,48 +233,49 @@ static inline void ws2812_delay_cycles(uint32_t cycles)
     }
 }
 /* @brief Send data to WS2812 LEDs using timing defines*/
-volatile uint32_t *set_reg = &PORT_REGS->GROUP[0].PORT_OUTSET;
-    volatile uint32_t *clr_reg = &PORT_REGS->GROUP[0].PORT_OUTCLR;
-    uint32_t pin_mask = (1 << 8); // PA08
-void ws2812_send_data(const uint8_t *data, size_t len)
+
+void __attribute__((optimize("O2"))) ws2812_send_data(const uint8_t *data, size_t len)
 {   
+    volatile uint32_t *set_reg = &PORT_IOBUS_REGS->GROUP[0].PORT_OUTSET;
+    volatile uint32_t *clr_reg = &PORT_IOBUS_REGS->GROUP[0].PORT_OUTCLR;
+    uint32_t pin_mask = (1 << 8); // PA08
     
     __disable_irq();
     
     for (size_t i = 0; i < len; i++) {
         uint8_t byte = data[i];
-        
+    
         for (int8_t bit = 7; bit >= 0; bit--) {
             if (byte & (1 << bit)) {
                 // Send '1' bit using T1H and T1L defines
                 *set_reg = pin_mask;
                 _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
                 _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-               // _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
-//                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+               //_nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
 //                _nop();_nop();
 //                __asm__ __volatile__(T1H_DELAY_ASM ::: "memory");
-                *clr_reg = pin_mask;
+                *clr_reg= pin_mask;
 //                __asm__ __volatile__(T1L_DELAY_ASM ::: "memory");
-                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-             //   _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-//                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
+                 _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
 //                _nop();_nop();_nop();_nop();_nop(); //5 nop's
                 
             } else {
                 // Send '0' bit using T0H and T0L defines
                 *set_reg = pin_mask;
                 //__asm__ __volatile__(T0H_DELAY_ASM ::: "memory");
-                //_nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-//                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop();
+                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();//_nop();_nop();_nop();_nop();
 //                _nop();
                 
                 *clr_reg = pin_mask;
 //                __asm__ __volatile__(T0L_DELAY_ASM ::: "memory");
-                //_nop();_nop();_nop();_nop();//_nop();_nop();//_nop();_nop(); //8 nop's
-                //_nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-                //_nop();_nop();//_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-//                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();//_nop();_nop();//_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
 //                _nop();_nop();_nop();_nop();_nop();_nop();
             }
         }
@@ -320,7 +323,7 @@ void ws2812_clear_all(void)
 void ws2812_show(void)
 {
     ws2812_transmission_complete = false;
-    ws2812_send_data(led_buffer, LED_BUFFER_SIZE);
+    ws2812_send_data(led_buffer, LED_BUFFER_SIZE) ;
 }
 void ws2812_test_timing(void)
 {

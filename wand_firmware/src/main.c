@@ -219,23 +219,23 @@ int main ( void )
     app_failed = 1;
     
     ws2812_init();
-    ws2812_set_pixel(0, 255, 255, 0);
-    ws2812_show();
-    sleep_ms(500);
-    ws2812_set_pixel(0, 0, 255, 255);
-    ws2812_show();
-    sleep_ms(500);
-    ws2812_set_pixel(0, 255, 0, 255);
-    ws2812_show();
-     sleep_ms(500);
     ws2812_set_pixel(0, 255, 0, 0);
     ws2812_show();
-    sleep_ms(500);
-    ws2812_set_pixel(0, 0, 255, 0);
-    ws2812_show();
-    sleep_ms(500);
-    ws2812_set_pixel(0, 0, 0, 255);
-    ws2812_show();
+//    sleep_ms(500);
+//    ws2812_set_pixel(0, 0, 255, 255);
+//    ws2812_show();
+//    sleep_ms(500);
+//    ws2812_set_pixel(0, 255, 0, 255);
+//    ws2812_show();
+//     sleep_ms(500);
+//    ws2812_set_pixel(0, 255, 0, 0);
+//    ws2812_show();
+//    sleep_ms(500);
+//    ws2812_set_pixel(0, 0, 255, 0);
+//    ws2812_show();
+//    sleep_ms(500);
+//    ws2812_set_pixel(0, 0, 0, 255);
+//    ws2812_show();
 //    ws2812_test_timing();
     
     
