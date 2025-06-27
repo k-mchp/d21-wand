@@ -3,10 +3,10 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/osal/osal.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
  ../src/packs/ATSAMD21G18A_DFP/samd21g18a.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm0plus.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h \
  ../src/packs/ATSAMD21G18A_DFP/component/ac.h \
  ../src/packs/ATSAMD21G18A_DFP/component/adc.h \
  ../src/packs/ATSAMD21G18A_DFP/component/dac.h \
@@ -70,7 +70,7 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/device_cache.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/osal/osal_definitions.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/osal/osal_impl_basic.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/int/sys_int.h \
@@ -82,11 +82,11 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/configuration.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/user.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_api.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/system_module.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/system_common.h \
@@ -104,11 +104,11 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc3.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc_common.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc4.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/time/sys_time.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/system.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/system_common.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/time/sys_time_definitions.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc4.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/spi/drv_spi.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/spi/drv_spi_definitions.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/dma/sys_dma.h \
@@ -139,13 +139,13 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
 
 ../src/packs/ATSAMD21G18A_DFP/samd21g18a.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm0plus.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h:
 
 ../src/packs/ATSAMD21G18A_DFP/component/ac.h:
 
@@ -273,7 +273,7 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
 
 ../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/osal/osal_definitions.h:
 
@@ -297,15 +297,15 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
 
 ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h:
 
-../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h:
-
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
 
-../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h:
+../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h:
+
+../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_api.h:
 
@@ -341,6 +341,8 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
 
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc_common.h:
 
+../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc4.h:
+
 ../src/config/SAMD21_IOT_WG_ICM42688/system/time/sys_time.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/system/system.h:
@@ -348,8 +350,6 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/121554788/nmspi.o: \
 ../src/config/SAMD21_IOT_WG_ICM42688/system/system_common.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/system/time/sys_time_definitions.h:
-
-../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc4.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/driver/spi/drv_spi.h:
 

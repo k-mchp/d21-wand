@@ -280,12 +280,12 @@ void SYS_Initialize ( void* data )
 
 
 
-    NVMCTRL_Initialize( );
-
     SERCOM2_SPI_Initialize();
 
-    SERCOM0_SPI_Initialize();
+    NVMCTRL_Initialize( );
 
+
+    SERCOM0_SPI_Initialize();
 
 	SYSTICK_TimerInitialize();
     DMAC_Initialize();
