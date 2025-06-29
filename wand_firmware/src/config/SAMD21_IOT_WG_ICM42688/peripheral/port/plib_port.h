@@ -83,6 +83,24 @@
 #define SW1_GPIO_PA01_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 1U)) & 0x01U)
 #define SW1_GPIO_PA01_PIN                  PORT_PIN_PA01
 
+/*** Macros for WS2812_PA02 pin ***/
+#define WS2812_PA02_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 2U))
+#define WS2812_PA02_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 2U))
+#define WS2812_PA02_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 2U))
+#define WS2812_PA02_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 2U))
+#define WS2812_PA02_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 2U))
+#define WS2812_PA02_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 2U)) & 0x01U)
+#define WS2812_PA02_PIN                  PORT_PIN_PA02
+
+/*** Macros for BUTTON_PA03 pin ***/
+#define BUTTON_PA03_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 3U))
+#define BUTTON_PA03_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 3U))
+#define BUTTON_PA03_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 3U))
+#define BUTTON_PA03_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 3U))
+#define BUTTON_PA03_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 3U))
+#define BUTTON_PA03_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 3U)) & 0x01U)
+#define BUTTON_PA03_PIN                  PORT_PIN_PA03
+
 /*** Macros for MBUS_SPI_MOSI_SERCOM0_PAD0 pin ***/
 #define MBUS_SPI_MOSI_SERCOM0_PAD0_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 4U)) & 0x01U)
 #define MBUS_SPI_MOSI_SERCOM0_PAD0_PIN                  PORT_PIN_PA04
@@ -103,6 +121,15 @@
 /*** Macros for MBUS_SPI_MISO_SERCOM0_PAD3 pin ***/
 #define MBUS_SPI_MISO_SERCOM0_PAD3_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 7U)) & 0x01U)
 #define MBUS_SPI_MISO_SERCOM0_PAD3_PIN                  PORT_PIN_PA07
+
+/*** Macros for LED_PA08 pin ***/
+#define LED_PA08_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 8U))
+#define LED_PA08_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 8U))
+#define LED_PA08_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 8U))
+#define LED_PA08_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 8U))
+#define LED_PA08_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 8U))
+#define LED_PA08_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 8U)) & 0x01U)
+#define LED_PA08_PIN                  PORT_PIN_PA08
 
 /*** Macros for LED_YELLOW pin ***/
 #define LED_YELLOW_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 11U))

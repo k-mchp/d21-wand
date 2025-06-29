@@ -5,10 +5,10 @@ build/SAMD21_IOT_WG_ICM42688/production/_ext/1784303044/wdrv_winc_osal.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/user.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
  ../src/packs/ATSAMD21G18A_DFP/samd21g18a.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm0plus.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h \
  ../src/packs/ATSAMD21G18A_DFP/component/ac.h \
  ../src/packs/ATSAMD21G18A_DFP/component/adc.h \
  ../src/packs/ATSAMD21G18A_DFP/component/dac.h \
@@ -71,7 +71,7 @@ build/SAMD21_IOT_WG_ICM42688/production/_ext/1784303044/wdrv_winc_osal.o: \
  ../src/packs/ATSAMD21G18A_DFP/pio/samd21g18a.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/device_cache.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
@@ -141,13 +141,13 @@ build/SAMD21_IOT_WG_ICM42688/production/_ext/1784303044/wdrv_winc_osal.o: \
 
 ../src/packs/ATSAMD21G18A_DFP/samd21g18a.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm0plus.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_gcc.h:
 
 ../src/packs/ATSAMD21G18A_DFP/component/ac.h:
 
@@ -273,7 +273,7 @@ build/SAMD21_IOT_WG_ICM42688/production/_ext/1784303044/wdrv_winc_osal.o: \
 
 ../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h:
 
-../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h:
 
