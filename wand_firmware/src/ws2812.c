@@ -215,7 +215,7 @@
 
 // Pin configuration for SAM IoT Curiosity Board
 // Using PA08 - pin already configured as output in MCC
-#define WS2812_DATA_PIN    PORT_PIN_PA08
+#define WS2812_DATA_PIN    PORT_PIN_PA02
 
 // Timing constants for SAMD21 at 48MHz (20.83ns per cycle)
 // WS2812 specification: 800kHz (1.25?s per bit)
@@ -304,7 +304,7 @@ void ws2812_send_data(const uint8_t *data, size_t len)
 {
     volatile uint32_t *set_reg = &PORT_REGS->GROUP[0].PORT_OUTSET;
     volatile uint32_t *clr_reg = &PORT_REGS->GROUP[0].PORT_OUTCLR;
-    uint32_t pin_mask = (1 << 8); // PA08
+    uint32_t pin_mask = (1 << 3); // PA03
     
     // Disable interrupts for precise timing
     __disable_irq();

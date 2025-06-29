@@ -109,6 +109,7 @@ static void Ticker_Callback(TC_TIMER_STATUS status, uintptr_t context) {
     }
     else if (++mstick == tickrate) {
         LED_STATUS_Toggle();
+        LED_BUTTON_PA08_Toggle();
         mstick = 0;
     }
 }
