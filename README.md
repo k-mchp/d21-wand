@@ -1,6 +1,6 @@
 ![https://www.microchip.com/](assets/microchip.png)![https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MPLAB-ML-Documentation&redirect=true](assets/MPLAB-MachineLearning.png)
 # Wand Gestures with MPLAB® Machine Learning Development Suite
-| ![Dall Detection](assets/Wand_Gestures.png) |
+| ![Dall Detection](assets/Wand_Gestures-new.png) |
 | :--: |
 | Wand Gesture Recognizer |
 
@@ -10,10 +10,9 @@ This repository contains the firmware to classify a Fall activity detection on a
 
 The supported activities are:
 
-- *Figure 8*
 - *Front Tap*
-- *CCW Circle*
-- *CW Circle*
+- *4*
+- *b*
 - *Left Swipe*
 - *Right Swipe*
 - *Idle*
