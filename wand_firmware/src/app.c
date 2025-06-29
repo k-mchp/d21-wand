@@ -90,6 +90,7 @@ void APP_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
+    LED_BUTTON_PA08_Set();
 
 
 }

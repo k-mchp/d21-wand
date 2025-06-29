@@ -4222,7 +4222,7 @@ data:
       children:
       - children:
         - attributes:
-            value: GPIO_PA08
+            value: LED_BUTTON_PA08
           type: User
         type: Values
       type: String

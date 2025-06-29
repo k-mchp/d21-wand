@@ -280,9 +280,9 @@ void SYS_Initialize ( void* data )
 
 
 
-    SERCOM2_SPI_Initialize();
-
     NVMCTRL_Initialize( );
+
+    SERCOM2_SPI_Initialize();
 
 
     SERCOM0_SPI_Initialize();
