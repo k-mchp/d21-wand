@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/C51209/d21-wand/ML%20Firmware/src/winc1500_tcp_client.c</file>
-            <file>file:/C:/Users/C51209/d21-wand/ML%20Firmware/src/winc1500_conf.h</file>
-            <file>file:/C:/Users/C51209/d21-wand/ML%20Firmware/src/app_config.h</file>
+            <file>file:/C:/Users/C74317/d21-wand/wand_firmware/src/ws2812.c</file>
+            <file>file:/C:/Users/C74317/d21-wand/wand_firmware/src/packs/ATSAMD21G18A_DFP/samd21g18a.h</file>
+            <file>file:/C:/Users/C74317/d21-wand/wand_firmware/src/main.c</file>
         </group>
     </open-files>
 </project-private>

@@ -271,17 +271,12 @@ void __attribute__((optimize("O2"))) ws2812_send_data(const uint8_t *data, size_
 //                _nop();
                 
                 *clr_reg = pin_mask;
-//                __asm__ __volatile__(T0L_DELAY_ASM ::: "memory");
-                _nop();_nop();//_nop();_nop();//_nop();_nop();//_nop();_nop(); //8 nop's
-               // _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-                //_nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
-//                _nop();_nop();_nop();_nop();_nop();_nop();
+                _nop();_nop();
             }
             if ( bit >0)
             {
                 _nop();_nop();_nop();_nop();_nop();_nop();_nop();_nop(); //8 nop's
-                _nop();_nop();_nop();_nop();_nop();//_nop();_nop();_nop(); //8 nop's
+                _nop();_nop();_nop();_nop();_nop(); //8 nop's
             }
         }
     }
