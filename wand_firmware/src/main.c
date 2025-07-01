@@ -44,6 +44,7 @@
 // *****************************************************************************
 // *****************************************************************************
 #include "definitions.h"
+#include "ws2812.h"
 
 //comment out to operate in continuous mode(no trigger)
 #define TRIGGER 1
@@ -426,7 +427,45 @@ int main ( void )
                 if (ret >= 0) {
                     /* Do something with classification output */
                     clsid = ret; // Assign class ID
-                    (void) clsid;
+                    
+                    switch ( clsid )
+                    {
+                        case 1://4
+                        { 
+                            ws2812_set_pixel(0, 0, 255, 0);//green
+                            break;
+                        }
+                        
+                        case 2://unkn
+                        {
+                            ws2812_set_pixel(0, 0, 128, 0);//yellow
+                            break;
+                        }
+                         case 3://b
+                        {
+                            ws2812_set_pixel(0, 0, 255, 255);//cyan
+                            break;
+                        }                       
+                         case 4://left
+                        {
+                            ws2812_set_pixel(0, 255, 0, 255);//violet
+                            break;
+                        }
+                         case 5://right
+                        {
+                            ws2812_set_pixel(0, 255, 0, 0);//red
+                            break;
+                        }
+                         case 6://tap
+                        {
+                            ws2812_set_pixel(0, 0, 0, 255);//blue
+                            break;
+                        }                           
+                         
+                    }
+                    
+                    
+                    ws2812_show();
                 }
             }            
         #endif

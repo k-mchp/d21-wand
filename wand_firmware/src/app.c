@@ -30,6 +30,7 @@
 #include "app.h"
 #include "wdrv_winc_client_api.h"
 #include "app_config.h"
+#include "ws2812.h"
 
 void TCP_Client_Initialize(DRV_HANDLE handle);
 void TCP_Client_Tasks(DRV_HANDLE handle);
