@@ -1,6 +1,6 @@
 ![https://www.microchip.com/](assets/microchip.png)![https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MPLAB-ML-Documentation&redirect=true](assets/MPLAB-MachineLearning.png)
 # Wand Gestures with MPLAB® Machine Learning Development Suite
-| ![Dall Detection](assets/Wand_Gestures-new.png) |
+| ![Wand Gestures](assets/Wand_Gestures-new.png) |
 | :--: |
 | Wand Gesture Recognizer |
 
@@ -18,9 +18,13 @@ The supported activities are:
 
 In addition there is also an 'unknown' class for gesture-like movement and an 'idle' class for low motion activity.
 
+## Triggered Gestures Dataset
+
+The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w5) was collected by Microchip employees along with other individuals and consists of subjects performing the wand gestures as described in the section above with a [SAMD21 BMI160 evaluation board](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A). The dataset includes a collection of samples in CSV format (ax,ay,az,gx,gy,gz,tr format) split into training and test folds. 
+
 ## Continuous Gestures Dataset
 
-The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data) was collected by Microchip employees along with other individuals and consists of subjects performing the wand gestures as described in the section above with a [SAMD21 BMI160 evaluation board](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A). The dataset includes a collection of 1.5-second long samples in CSV format (ax,ay,az,gx,gy,gz format) split into training and test folds. 
+The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w4)includes a collection of samples in CSV format (ax,ay,az,gx,gy,gz format) split into training and test folds. 
 
 In addition to the target activities, some additional gestures random activity signals  were collected to make up the *unknown* gestures class, which is used to help improve and validate the model's discriminatory ability.
 
@@ -61,7 +65,7 @@ In addition, the firmware also prints the classification output for each inferen
 ## Performing Gestures
 Gestures should be performed in a way that feels natural, using a thumb and index finger grip around the SAMD21 board as shown in the image below. The top of the board should be facing away from the user, with the USB connector oriented towards the ground.
 
-| ![Thumb and index finger grip](assets/sam-iot-holding-posture.png) |
+| ![Thumb and index finger grip](assets/wand-posture.png) |
 | :--: |
 | Thumb and index finger grip |
 
