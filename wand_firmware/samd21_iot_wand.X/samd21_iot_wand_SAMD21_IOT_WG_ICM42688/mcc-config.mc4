@@ -33,7 +33,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\configuration.h
   hash: 2de073c9188e84ec981860620bf33b7e2a0b3b1034fec206f8bff6bd0681d7d0
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\definitions.h
-  hash: 0e41b8cb619933e70aead7cfa296c164281b1eb47594ae1f850259b863e51992
+  hash: 7c421ed9dc4b0e8891e1c4a3806a876938756808a8d115010e50e0c2319fc298
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\device.h
   hash: 0ed51e9beab46e39126b318520d7abeb1396aab99aef2f09388a113e2b603e23
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\device_cache.h
@@ -213,7 +213,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\exceptions.c
   hash: b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\initialization.c
-  hash: 6eaef11a7069d9e8797d1c605db7ac5e459923cd2b24a9ad86b7e238bcb24abc
+  hash: 7dc4e621c1d604d76a74b85c2330fc522d006b0c308fe93821d0fb8aa0179b53
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\interrupts.c
   hash: 320ee417cd4a17593dd41b411f8cdfbcd7bd1949a9c377ac74d12b088533cdcc
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\interrupts.h
@@ -251,9 +251,9 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\peripheral\nvmctrl\plib_nvmctrl.h
   hash: 5ed5f5c5b0892544d57303872afa61c7a560577850ce23de1af5f8113193f2dd
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\peripheral\port\plib_port.c
-  hash: 13ca38cfe187e5737d7b528f7354a4c3a0f80dd3d0ffc376e3a251fa4102be05
+  hash: eabd4e6c5629c6cddabf34448f6575b9327570ffae6a798b62a0ab547fa0db20
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\peripheral\port\plib_port.h
-  hash: 889bf9f6128f17d4e3b343f96b188f4e03dac09b4b7fb3c85af681ebe57d8c21
+  hash: 698eb0b4f46116ae41741ff399c1741828b8d9ef7b35f2cfbc01a119284877b8
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\peripheral\sercom\spi_master\plib_sercom0_spi_master.c
   hash: cb27226db0f7e659c616b3d3d8dd5358e4396c3f5cbd109ebe79fa1ed8b5ea38
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\peripheral\sercom\spi_master\plib_sercom0_spi_master.h
@@ -285,7 +285,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\peripheral\tc\plib_tc_common.h
   hash: dfcd44628e6df3f21f95c3b998065c4c795e9ff87b67e9eb805a7eab4810f971
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\pin_configurations.csv
-  hash: 70220f762b491d86d02dd7d0833234dd88c065f15023d946231fe57cef25b058
+  hash: b1c76a18ab9b374163a9de2cbf0f1fa30ee5e484df71308b85ae807f83b68366
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\startup_xc32.c
   hash: e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e
 - file: ..\src\config\SAMD21_IOT_WG_ICM42688\stdio\xc32_monitor.c

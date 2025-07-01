@@ -117,6 +117,7 @@
 // *****************************************************************************
 // *****************************************************************************
 #define SNSR_NUM_AXES   (3*SNSR_USE_ACCEL + 3*SNSR_USE_GYRO)
+#define SNSR_NUM_AXES_tr   (3*SNSR_USE_ACCEL + 3*SNSR_USE_GYRO +1)//added trigger
 
 /* Define whether multiple sensors types are being used */
 #if (SNSR_USE_ACCEL && SNSR_USE_GYRO)
@@ -137,6 +138,7 @@
 #define snsr_sleep_us      sleep_us
 
 #define STREAM_FORMAT_IS(X) (defined(DATA_STREAMER_FORMAT_ ## X) && (DATA_STREAMER_FORMAT_ ## X == DATA_STREAMER_FORMAT))
+#define TRIGGER_FORMAT_IS(X) (defined(TRIGGER_FORMAT_ ## X) && (TRIGGER_FORMAT_ ## X == TRIGGER_FORMAT))
 
 #ifdef SNSR_TYPE_BMI160
 #define SNSR_NAME "bmi160"

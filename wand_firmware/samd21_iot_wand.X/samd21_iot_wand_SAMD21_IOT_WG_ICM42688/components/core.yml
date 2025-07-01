@@ -1498,36 +1498,6 @@ data:
           type: User
         type: Values
       type: String
-    PIN_14_DIR:
-      attributes:
-        id: PIN_14_DIR
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
-      type: String
-    PIN_14_INEN:
-      attributes:
-        id: PIN_14_INEN
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
-      type: String
-    PIN_14_PULLEN:
-      attributes:
-        id: PIN_14_PULLEN
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
-      type: String
     PIN_16_DIR:
       attributes:
         id: PIN_16_DIR
@@ -2658,7 +2628,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x2300944'
+            value: '0x2300948'
           type: Dynamic
         type: Values
       type: String
@@ -2669,7 +2639,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x230080b'
+            value: '0x230080f'
           type: Dynamic
         type: Values
       type: String
@@ -4045,7 +4015,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x0'
+            value: '0x6'
           type: Dynamic
         type: Values
       type: String
@@ -4066,7 +4036,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: 'True'
           type: User
         type: Values
       type: String
@@ -4076,7 +4046,7 @@ data:
       children:
       - children:
         - attributes:
-            value: Out
+            value: ''
           type: User
         type: Values
       type: String
@@ -4118,7 +4088,7 @@ data:
       children:
       - children:
         - attributes:
-            value: GPIO_PA02
+            value: TRIGGER_PA02
           type: User
         type: Values
       type: String
@@ -4222,7 +4192,7 @@ data:
       children:
       - children:
         - attributes:
-            value: LED_BUTTON_PA08
+            value: WS2812_PA08
           type: User
         type: Values
       type: String
@@ -4253,7 +4223,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x6'
+            value: '0x0'
           type: Dynamic
         type: Values
       type: String
@@ -4274,7 +4244,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'True'
+            value: ''
           type: User
         type: Values
       type: String
@@ -4284,7 +4254,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: Out
           type: User
         type: Values
       type: String
@@ -4315,7 +4285,7 @@ data:
       children:
       - children:
         - attributes:
-            value: TRIGGER_PA03
+            value: LED_BUTTON_PA03
           type: User
         type: Values
       type: String
@@ -4325,13 +4295,65 @@ data:
       children:
       - children:
         - attributes:
-            value: 'True'
+            value: ''
           type: User
         type: Values
       type: String
     PIN_4_LAT:
       attributes:
         id: PIN_4_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PORT_GROUP_0_PIN_9_USED:
+      attributes:
+        id: PORT_GROUP_0_PIN_9_USED
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PORT_GROUP_0_PAD_9:
+      attributes:
+        id: PORT_GROUP_0_PAD_9
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: PA09
+          type: Dynamic
+        type: Values
+      type: String
+    PIN_14_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_14_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_3_PULLEN:
+      attributes:
+        id: PIN_3_PULLEN
+      children:
+      - children:
+        - attributes:
+            value: 'True'
+          type: User
+        type: Values
+      type: String
+    PIN_3_LAT:
+      attributes:
+        id: PIN_3_LAT
       children:
       - children:
         - attributes:
