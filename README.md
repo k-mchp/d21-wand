@@ -77,7 +77,7 @@ Below is the confusion matrix for the test dataset. Note that the classes are im
 
 Below is the feature vector plot for the test dataset. Note that the grouping is tight in this SVM model and there is good seperation between clusters (except for CCW and CW circle).  CCW and CW will probably get false positives and false negative with this model; however, the other actions should have a high accuracy of classifying correctly.
 
-![Test set Feature Vector Plot](assets/Feature_Vector_Plot.png)
+![Test set Feature Vector Plot](assets/Feature_Vector_Plot_3_0.png)
 
 # Sensor Configuration
 Binary builds of the data logging firmware used in the data collection for this project can be found in the [binaries](https://github.com/MicrochipTech/ml-samd21-iot-mplabml-gestures-demo/tree/main/binaries) folder of this repo; see the [ml-samd21-iot-imu-data-logger](https://github.com/MicrochipTech/ml-samd21-iot-imu-data-logger) repository to build data logging firmware with different sensor configurations.
