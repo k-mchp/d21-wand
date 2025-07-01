@@ -5,7 +5,7 @@
 | Wand Gesture Recognizer |
 
 ## Repository Overview
-This repository contains the firmware to classify a Fall activity detection on a SAMD21 Machine Learning Kit with the [TDK ICM42688 IMU](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV18H79A) ([Mikroe IMU14 click board](https://www.mikroe.com/6dof-imu-14-click)).
+This repository contains the firmware to classify a Wand Gesture detection on a SAMD21 Machine Learning Kit with the [TDK ICM42688 IMU](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV18H79A) ([Mikroe IMU14 click board](https://www.mikroe.com/6dof-imu-14-click)).
 
 The supported activities are:
 
@@ -20,15 +20,30 @@ In addition there is also an 'unknown' class for gesture-like movement and an 'i
 
 ## Triggered Gestures Dataset
 
-The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w5) was collected by Microchip employees along with other individuals and consists of subjects performing the wand gestures as described in the section above with a [SAMD21 BMI160 evaluation board](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A). The dataset includes a collection of samples in CSV format (ax,ay,az,gx,gy,gz,tr format) split into training and test folds. 
+The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w5) was collected by Microchip employees along with other individuals and consists of subjects performing the wand gestures as described in the section above with a [SAMD21 BMI160 evaluation board](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A). The dataset includes a collection of samples in CSV format (Ax, Ay, Az, Gx, Gy, Gz, TR format) split into training and test folds. 
 
 ## Continuous Gestures Dataset
 
-The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w4)includes a collection of samples in CSV format (ax,ay,az,gx,gy,gz format) split into training and test folds. 
+The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w4) includes a collection of samples in CSV format (Ax, Ay, Az, Gx, Gy, Gz format) split into training and test folds. 
 
 In addition to the target activities, some additional gestures random activity signals  were collected to make up the *unknown* gestures class, which is used to help improve and validate the model's discriminatory ability.
 
 Furthermore, the *idle* class data consists of scenarios where the device is fully at rest in different orientations and other scenarios with small motion activities that includes fidgeting with the board (manipulating the board randomly with the fingers) and pacing around the room while holding the board.
+
+
+## Wand Setup
+
+Below is the app_config.h file in the wand_firmware project. Default format is NONE, which will put the wand ininference mode.  Just do gestures and watch the LED change color based on gestures.  MDV format will setup the wand to collect data via the Data Visualizer in MPLAB.
+
+![Change data streaming format](assets/stream_format.png)
+
+## Wand Data collector usage
+
+Below is a screenshot of the Data Visualizer logging triggered data from the Wand.  For triggered wand data you must press the button as you carry out gestures.  You must also use the triggered DV workspace [here](https://github.com/k-mchp/d21-wand/blob/main/mplab_dv_workspaces/6dof-imu-acc-gyr-trigger.dvws)
+
+For continuous wand data use the continuous DV workspace [here](https://github.com/k-mchp/d21-wand/blob/main/mplab_dv_workspaces/6dof-imu-acc-gyr.dvws)
+
+![Logging Data](assets/trigger_logger.png)
 
 ## Hardware Used
 * SAMD21 Machine Learning Evaluation Kit with TDK ICM42688 IMU [(EV18H79A)](https://www.microchip.com/developmenttools/ProductDetails/EV18H79A)
