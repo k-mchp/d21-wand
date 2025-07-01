@@ -86,13 +86,14 @@ Gestures should be performed in a way that feels natural, using a thumb and inde
 
 
 ## Classifier Performance
-Below is the confusion matrix for the test dataset. Note that the classes are imbalanced so accuracy is not a good indicator of overall performance.
-
-![Test set confusion matrix](assets/matrix_gest3_rank4.png)
-
 Below is the feature vector plot for the test dataset. Note that the grouping is tight in this model and there is good seperation between clusters.
 
 ![Test set Feature Vector Plot](assets/Feature_Vector_Plot_3_0.png)
+
+## Training Confusion Matrix
+Below is the confusion matrix for the test dataset. This depicts the number of times the model correctly choose the classifiaction ID.
+
+![Test set confusion matrix](assets/training_matrix.png)
 
 # Sensor Configuration
 
