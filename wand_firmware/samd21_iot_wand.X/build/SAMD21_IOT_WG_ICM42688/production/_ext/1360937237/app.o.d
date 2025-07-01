@@ -74,10 +74,10 @@ build/SAMD21_IOT_WG_ICM42688/production/_ext/1360937237/app.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_client_api.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_api.h \
@@ -305,13 +305,13 @@ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Includ
 
 ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h:
 
-../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h:
-
-../src/config/SAMD21_IOT_WG_ICM42688/device.h:
-
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
+
+../src/config/SAMD21_IOT_WG_ICM42688/device.h:
+
+../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h:
 

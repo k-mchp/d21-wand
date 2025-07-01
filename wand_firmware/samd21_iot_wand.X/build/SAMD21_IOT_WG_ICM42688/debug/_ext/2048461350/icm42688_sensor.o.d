@@ -4,7 +4,8 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/2048461350/icm42688_sensor.o: \
  ../Icm426xx/Icm426xxDriver_HL.h ../Icm426xx/Icm426xxDefs.h \
  ../Icm426xx/Icm426xxTransport.h ../Icm426xx/InvError.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
  ../src/packs/ATSAMD21G18A_DFP/samd21g18a.h \
  C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm0plus.h \
@@ -75,8 +76,7 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/2048461350/icm42688_sensor.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/device.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h \
  C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h \
- ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
+ ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_api.h \
@@ -140,7 +140,9 @@ build/SAMD21_IOT_WG_ICM42688/debug/_ext/2048461350/icm42688_sensor.o: \
 
 ../src/config/SAMD21_IOT_WG_ICM42688/definitions.h:
 
-../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h:
+../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h:
+
+../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/device.h:
 
@@ -282,9 +284,7 @@ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Includ
 
 C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
 
-../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.h:
-
-../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
+../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h:
 
 ../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h:
 

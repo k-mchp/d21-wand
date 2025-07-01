@@ -30,6 +30,7 @@
 #include "ringbuffer.h"
 #include "sensor.h"
 #include "app_config.h"
+//#include "ws2812.h"
 //#include "./../mplabml/inc/kb.h"
 //#include "sml_output.h"
 //#include "./../application/sml_recognition_run.h"
@@ -43,6 +44,9 @@
 // *****************************************************************************
 // *****************************************************************************
 #include "definitions.h"
+
+//comment out to operate in continuous mode(no trigger)
+#define TRIGGER 1
 
 // *****************************************************************************
 // *****************************************************************************
@@ -109,7 +113,7 @@ static void Ticker_Callback(TC_TIMER_STATUS status, uintptr_t context) {
     }
     else if (++mstick == tickrate) {
         LED_STATUS_Toggle();
-        LED_BUTTON_PA08_Toggle();
+        LED_BUTTON_PA03_Toggle();
         mstick = 0;
     }
 }
@@ -219,9 +223,9 @@ int main ( void )
     /* Application init routine */
     app_failed = 1;
     
-     ws2812_init();
-     ws2812_set_pixel(0, 255, 0, 0);
-    ws2812_show();
+    //ws2812_init();
+    //ws2812_set_pixel(0, 255, 255, 255);
+    //ws2812_show();
     
     
     while (1)
@@ -376,8 +380,12 @@ int main ( void )
                 printf("\n");
     #elif STREAM_FORMAT_IS(MDV)
                 uint8_t headerbyte = MDV_START_OF_FRAME;
+                uint8_t triggerbyte = !(TRIGGER_PA02_Get());
                 UART_Write(&headerbyte, 1);
                 UART_Write((uint8_t *) ptr, sizeof(snsr_datapacket_t));
+        #if (TRIGGER)
+                UART_Write(&triggerbyte, 1);//add trigger to data stream
+        #endif                
                 headerbyte = ~headerbyte;
                 UART_Write(&headerbyte, 1);
     #elif STREAM_FORMAT_IS(WIFI)

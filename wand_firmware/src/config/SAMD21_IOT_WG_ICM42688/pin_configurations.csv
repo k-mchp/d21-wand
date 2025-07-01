@@ -1,15 +1,15 @@
 Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,Drive Strength
 1,PA00,SW0_GPIO_PA00,GPIO,Digital,In,n/a,Yes,No,NORMAL
 2,PA01,SW1_GPIO_PA01,GPIO,Digital,In,n/a,Yes,No,NORMAL
-3,PA02,GPIO_PA02,GPIO,Digital,Out,Low,,,NORMAL
-4,PA03,TRIGGER_PA03,GPIO,Digital,In,n/a,Yes,No,NORMAL
+3,PA02,TRIGGER_PA02,GPIO,Digital,In,n/a,Yes,No,NORMAL
+4,PA03,LED_BUTTON_PA03,GPIO,Digital,Out,High,,,NORMAL
 7,PB08,,Available,,,,,,NORMAL
 8,PB09,,Available,,,,,,NORMAL
 9,PA04,MBUS_SPI_MOSI_SERCOM0_PAD0,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
 10,PA05,MBUS_SPI_SCK_SERCOM0_PAD1,SERCOM0_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
 11,PA06,MIKRO_CS,GPIO,Digital,Out,Low,,,NORMAL
 12,PA07,MBUS_SPI_MISO_SERCOM0_PAD3,SERCOM0_PAD3,Digital,High Impedance,n/a,No,No,NORMAL
-13,PA08,LED_BUTTON_PA08,GPIO,Digital,Out,Low,,,NORMAL
+13,PA08,WS2812_PA08,GPIO,Digital,Out,Low,,,NORMAL
 14,PA09,,Available,,,,,,NORMAL
 15,PA10,,Available,,,,,,NORMAL
 16,PA11,LED_YELLOW,GPIO,Digital,Out,High,,,NORMAL

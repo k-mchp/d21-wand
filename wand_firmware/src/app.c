@@ -90,7 +90,11 @@ void APP_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
-    LED_BUTTON_PA08_Set();
+    LED_BUTTON_PA03_Set(); //Turn on button LED upon startup
+    
+    ws2812_init();
+    ws2812_set_pixel(0, 0, 255, 255);
+    ws2812_show();
 
 
 }
