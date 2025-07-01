@@ -60,6 +60,20 @@ typedef enum
     TCP_CLIENT_STATE_ERROR,
 } TCP_CLIENT_STATES;
 
+typedef enum
+{
+    /* Example's state machine's initial state. */
+    UDP_CLIENT_STATE_INIT=0,
+    UDP_CLIENT_STATE_CONNECTING,
+    UDP_CLIENT_STATE_CONNECTED,
+    UDP_CLIENT_STATE_READY,
+    //UDP_CLIENT_READY_TO_SEND,
+    UDP_CLIENT_STATE_TRANSACT_MSG,
+    UDP_CLIENT_STATE_IDLE,
+    UDP_CLIENT_STATE_DISCONNECTED,
+    UDP_CLIENT_STATE_ERROR,
+} UDP_CLIENT_STATES;
+
 // *****************************************************************************
 /* Application states
 
@@ -183,9 +197,10 @@ void APP_Initialize ( void );
 
 void APP_Tasks( void );
 
+uint8_t get_UDP_client_state(void);
 uint8_t get_TCP_client_state(void);
 void tx_wifi_new_sensordata(uint8_t *tbuf);
-
+#define UDP 1
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }

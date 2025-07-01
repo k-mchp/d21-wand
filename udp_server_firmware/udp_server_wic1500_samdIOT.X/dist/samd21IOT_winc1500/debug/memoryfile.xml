@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/samd21IOT_winc1500/debug/udp_server_wic1500_samdIOT.X.debug.elf">
+    <memory name="program">
+      <units>bytes</units>
+      <length>262144</length>
+      <used>43523</used>
+      <free>218621</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>32768</length>
+      <used>4529</used>
+      <free>28239</free>
+    </memory>
+  </executable>
+</project>
