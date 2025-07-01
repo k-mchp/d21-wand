@@ -153,7 +153,7 @@ build/SAMD21_IOT_WG_ICM42688/production/_ext/1360937237/app.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_powersave.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_nvm.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_enterprise.h \
- ../src/app_config.h
+ ../src/app_config.h ../src/ws2812.h
 
 ../src/app.h:
 
@@ -464,3 +464,5 @@ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Includ
 ../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/wdrv_winc_enterprise.h:
 
 ../src/app_config.h:
+
+../src/ws2812.h:

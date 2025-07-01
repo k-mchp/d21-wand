@@ -30,6 +30,7 @@
 #include "app.h"
 #include "wdrv_winc_client_api.h"
 #include "app_config.h"
+#include "ws2812.h"
 
 #if defined(UDP)
 void UDP_Client_Initialize(DRV_HANDLE handle);

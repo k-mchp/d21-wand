@@ -122,7 +122,7 @@ build/SAMD21_IOT_WG_ICM42688/production/_ext/1360937237/main.o: \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/dma/sys_dma.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/osal/osal.h \
  ../src/config/SAMD21_IOT_WG_ICM42688/system/debug/sys_debug.h \
- ../src/app.h
+ ../src/app.h ../src/ws2812.h
 
 ../src/ringbuffer.h:
 
@@ -379,3 +379,5 @@ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/arm/CMSIS/5.4.0/CMSIS/Core/Includ
 ../src/config/SAMD21_IOT_WG_ICM42688/system/debug/sys_debug.h:
 
 ../src/app.h:
+
+../src/ws2812.h:
