@@ -389,7 +389,11 @@ int main ( void )
                 headerbyte = ~headerbyte;
                 UART_Write(&headerbyte, 1);
     #elif STREAM_FORMAT_IS(WIFI)
+#if defined(UDP) 
+                if(get_UDP_client_state() == UDP_CLIENT_STATE_READY)
+#else                
                 if(get_TCP_client_state() == TCP_CLIENT_READY_TO_SEND)
+#endif                      
                 {
                     /* Copy 12 bytes of sensor data into tx_buf starting at index 1.
                      * This is assuming both accel and gyro is used.

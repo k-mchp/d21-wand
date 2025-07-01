@@ -31,8 +31,13 @@
 #include "wdrv_winc_client_api.h"
 #include "app_config.h"
 
+#if defined(UDP)
+void UDP_Client_Initialize(DRV_HANDLE handle);
+void UDP_Client_Tasks(DRV_HANDLE handle);
+#else
 void TCP_Client_Initialize(DRV_HANDLE handle);
 void TCP_Client_Tasks(DRV_HANDLE handle);
+#endif
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -134,7 +139,11 @@ void APP_Tasks ( void )
 
             if (DRV_HANDLE_INVALID != wdrvHandle)
             {
+#if defined(UDP) 
+                UDP_Client_Initialize(wdrvHandle);
+#else                
                 TCP_Client_Initialize(wdrvHandle);
+#endif                 
                 appData.state = APP_STATE_WDRV_OPEN;
             }
             #endif
@@ -144,7 +153,11 @@ void APP_Tasks ( void )
         case APP_STATE_WDRV_OPEN:
         {   
             #if STREAM_FORMAT_IS(WIFI)
+#if defined(UDP) 
+            UDP_Client_Tasks(wdrvHandle);
+#else                
             TCP_Client_Tasks(wdrvHandle);
+#endif  
             #endif
             break;
         }
