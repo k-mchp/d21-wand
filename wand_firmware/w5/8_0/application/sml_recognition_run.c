@@ -1,5 +1,5 @@
-#include "kb.h"
-#include "kb_output.h"
+#include "./../mplabml/inc/kb.h"
+#include "./../mplabml/inc/kb_output.h"
 #include <string.h>
 #ifdef SML_USE_TEST_DATA
 #include "testdata.h"
