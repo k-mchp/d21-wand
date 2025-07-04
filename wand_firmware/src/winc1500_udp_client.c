@@ -233,6 +233,6 @@ uint8_t get_UDP_client_state(void)
 
 void tx_wifi_new_sensordata(uint8_t *tbuf)
 {
-    memcpy(txBuffer, tbuf, 14);
+    memcpy(txBuffer, tbuf, UDP_BUFFER_SIZE);
     state = UDP_CLIENT_STATE_TRANSACT_MSG;
 }

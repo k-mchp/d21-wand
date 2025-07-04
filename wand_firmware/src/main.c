@@ -207,10 +207,10 @@ int main ( void )
     /*We are setting this manually assuming that both accel & gyro is used.
      *Eventually we need something more elegant to automatically set this based
      *on usage of IMU sensors. */
-    uint8_t wifi_tx_buffer[14];
+    uint8_t wifi_tx_buffer[15];
     uint8_t headerbyte = MDV_START_OF_FRAME;
     wifi_tx_buffer[0] = headerbyte;
-    wifi_tx_buffer[13] = ~headerbyte;
+    wifi_tx_buffer[14] = ~headerbyte;
 #endif
     /* Initialize all modules */
     SYS_Initialize ( NULL );
@@ -399,7 +399,9 @@ int main ( void )
                     /* Copy 12 bytes of sensor data into tx_buf starting at index 1.
                      * This is assuming both accel and gyro is used.
                      */
+                    uint8_t triggerbyte = !(TRIGGER_PA02_Get());
                     memcpy(&wifi_tx_buffer[1], (uint8_t *) ptr, 12);
+                    wifi_tx_buffer[13]=triggerbyte;
                     tx_wifi_new_sensordata(wifi_tx_buffer);
                 }
     #elif STREAM_FORMAT_IS(SMLSS)

@@ -3,19 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/driver/winc/drv/socket/socket.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/driver/winc/wdrv_winc_socket.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/winc1500_conf.h</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/driver/winc/wdrv_winc.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/main.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/driver/winc/include/drv/socket/netinet_in.h</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/driver/winc/include/drv/socket/socket.h</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/winc1500_udp_server.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/peripheral/nvic/plib_nvic.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/exceptions.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/app.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/peripheral/tc/plib_tc3.c</file>
-            <file>file:/C:/work/demos/d21-wand/udp_server/src/config/samd21IOT_winc1500/driver/winc/drv/driver/m2m_hif.c</file>
+            <file>file:/C:/Users/C51209/d21-wand/udp_server_firmware/src/winc1500_conf.h</file>
+            <file>file:/C:/Users/C51209/d21-wand/udp_server_firmware/src/winc1500_udp_server.c</file>
         </group>
     </open-files>
 </project-private>
