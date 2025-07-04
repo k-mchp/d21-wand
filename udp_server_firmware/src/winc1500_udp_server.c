@@ -221,8 +221,8 @@ static void APP_ExampleSocketEventCallback(SOCKET socket, uint8_t messageType, v
 
             if ((NULL != pRecvMessage) && (pRecvMessage->s16BufferSize > 0))
             {
-
-                SYS_CONSOLE_Print(appData.consoleHandle, "%s", pRecvMessage->pu8Buffer);
+				SERCOM5_USART_Write(pRecvMessage->pu8Buffer, pRecvMessage->s16BufferSize);
+                //SYS_CONSOLE_Print(appData.consoleHandle, "%s", pRecvMessage->pu8Buffer);
                 //memset(recvBuffer, 0, UDP_BUFFER_SIZE);
                 //state = UDP_SERVER_STATE_RECEIVE;
                 //recv(udp_client_socket, recvBuffer, UDP_BUFFER_SIZE, 0);
