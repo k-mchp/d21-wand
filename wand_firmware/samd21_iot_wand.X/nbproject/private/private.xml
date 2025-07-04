@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/Users/C51209/d21-wand/wand_firmware/src/winc1500_conf.h</file>
             <file>file:/C:/Users/C51209/d21-wand/wand_firmware/src/app_config.h</file>
+            <file>file:/C:/Users/C51209/d21-wand/wand_firmware/w5/12_1/application/sml_recognition_run.c</file>
             <file>file:/C:/Users/C51209/d21-wand/wand_firmware/src/winc1500_udp_client.c</file>
             <file>file:/C:/Users/C51209/d21-wand/wand_firmware/src/main.c</file>
         </group>

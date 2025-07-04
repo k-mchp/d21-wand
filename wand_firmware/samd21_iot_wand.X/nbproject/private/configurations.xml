@@ -22,7 +22,7 @@
       </runprofile>
     </conf>
     <conf name="SAMD21_IOT_WG_ICM42688" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>03EB:=&lt;pid>2175:=&lt;rev>0100:=&lt;man>Microchip Technology Incorporated:=&lt;prod>nEDBG CMSIS-DAP:=&lt;sn>MCHP3309031800001350:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
+      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>03EB:=&lt;pid>2175:=&lt;rev>0100:=&lt;man>Microchip Technology Incorporated:=&lt;prod>nEDBG CMSIS-DAP:=&lt;sn>MCHP3309031800001686:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\xc32\v4.60\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
