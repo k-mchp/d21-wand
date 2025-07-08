@@ -85,11 +85,6 @@ Gestures should be performed in a way that feels natural, using a thumb and inde
 | Thumb and index finger grip |
 
 
-## Classifier Performance
-Below is the feature vector plot for the test dataset. Note that the grouping is tight in this model and there is good seperation between clusters.
-
-![Test set Feature Vector Plot](assets/Feature_Vector_Plot_3_0.png)
-
 ## Training Confusion Matrix
 Below is the confusion matrix for the test dataset. This depicts the number of times the model correctly choose the classifiaction ID.
 
