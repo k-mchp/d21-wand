@@ -56,8 +56,8 @@ data:
     - children:
       - attributes:
           id: drvWifiWinc
-          x: '548'
-          y: '369'
+          x: '612'
+          y: '368'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
