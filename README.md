@@ -20,7 +20,7 @@ In addition there is also an 'unknown' class for gesture-like movement and an 'i
 
 ## Triggered Gestures Dataset
 
-The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w5) was collected by Microchip employees along with other individuals and consists of subjects performing the wand gestures as described in the section above with a [SAMD21 BMI160 evaluation board](https://www.microchip.com/developmenttools/ProductDetails/EV45Y33A). The dataset includes a collection of samples in CSV format (Ax, Ay, Az, Gx, Gy, Gz, TR format) split into training and test folds. 
+The [Activity dataset](https://github.com/k-mchp/d21-wand/tree/main/wand_training_data/w5) was collected by Microchip employees along with other individuals and consists of subjects performing the wand gestures as described in the section above with a [SAMD21 TDK ICM42688 evaluation board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV18H79A). The dataset includes a collection of samples in CSV format (Ax, Ay, Az, Gx, Gy, Gz, TR format) split into training and test folds. 
 
 ## Continuous Gestures Dataset
 

@@ -98,8 +98,12 @@ void APP_Initialize ( void )
     appData.state = APP_STATE_INIT;
     LED_BUTTON_PA03_Set(); //Turn on button LED upon startup
     
+    if( !(TRIGGER_PA02_Get())){
+        wifi_mode=true;
+    }
+    
     ws2812_init();
-    ws2812_set_pixel(0, 0, 255, 255);
+    ws2812_set_pixel(0, 255, 0, 0);//red for logging mode
     ws2812_show();
 
 
@@ -135,6 +139,11 @@ void APP_Tasks ( void )
 
         case APP_STATE_WDRV_INIT_READY:
         {
+            if (wifi_mode){
+                wdrvHandle = WDRV_WINC_Open(0, 0);
+                UDP_Client_Initialize(wdrvHandle);
+                appData.state = APP_STATE_WDRV_OPEN;               
+            }
             #if STREAM_FORMAT_IS(WIFI)
             wdrvHandle = WDRV_WINC_Open(0, 0);
 
@@ -153,6 +162,9 @@ void APP_Tasks ( void )
 
         case APP_STATE_WDRV_OPEN:
         {   
+            if (wifi_mode){
+                UDP_Client_Tasks(wdrvHandle);
+            }
             #if STREAM_FORMAT_IS(WIFI)
 #if defined(UDP) 
             UDP_Client_Tasks(wdrvHandle);
