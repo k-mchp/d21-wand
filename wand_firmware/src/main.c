@@ -30,10 +30,7 @@
 #include "ringbuffer.h"
 #include "sensor.h"
 #include "app_config.h"
-//#include "ws2812.h"
-//#include "./../mplabml/inc/kb.h"
-//#include "sml_output.h"
-//#include "./../application/sml_recognition_run.h"
+
 
 #if STREAM_FORMAT_IS(SMLSS)
 #include "ssi_comms.h"
@@ -196,7 +193,11 @@ size_t ssi_build_json_config(char json_config_str[], size_t maxlen)
 
 int main ( void )
 {
+    APP_Initialize();
     
+    ws2812_init();
+    ws2812_set_pixel(0, 0, 255, 255);//cyan for logging mode
+    ws2812_show();
     
     int8_t app_failed = 0;
 #if STREAM_FORMAT_IS(SMLSS)
@@ -212,6 +213,13 @@ int main ( void )
     wifi_tx_buffer[0] = headerbyte;
     wifi_tx_buffer[14] = ~headerbyte;
 #endif
+    
+    if (wifi_mode){
+        uint8_t wifi_tx_buffer[15];
+        uint8_t headerbyte = MDV_START_OF_FRAME;
+        wifi_tx_buffer[0] = headerbyte;
+        wifi_tx_buffer[14] = ~headerbyte;       
+    }
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
@@ -223,11 +231,7 @@ int main ( void )
 
     /* Application init routine */
     app_failed = 1;
-    
-    //ws2812_init();
-    //ws2812_set_pixel(0, 255, 255, 255);
-    //ws2812_show();
-    
+      
     
     while (1)
     {
@@ -277,21 +281,24 @@ int main ( void )
  
         
     #if STREAM_FORMAT_IS(NONE)    
-        /* Initialize MPLAB ML Knowledge Pack */
-        kb_model_init();
-        //sml_output_init(NULL);
-        
-        /* Display the model knowledge pack UUID */
-        const uint8_t *ptr = kb_get_model_uuid_ptr(0);
-        printf("Running MPLAB ML knowledge pack uuid ");
-        printf("%02x", *ptr++); 
-        for (int i=1; i < 15; i++) {
-            if ((i%4) == 0)
-                printf("-");
+
+        if (!wifi_mode){//only if wifi mode has not been selected
+            /* Initialize MPLAB ML Knowledge Pack */
+            kb_model_init();
+            //sml_output_init(NULL);
+
+            /* Display the model knowledge pack UUID */
+            const uint8_t *ptr = kb_get_model_uuid_ptr(0);
+            printf("Running MPLAB ML knowledge pack uuid ");
             printf("%02x", *ptr++); 
+            for (int i=1; i < 15; i++) {
+                if ((i%4) == 0)
+                    printf("-");
+                printf("%02x", *ptr++); 
+            }
+            printf("%02x", *ptr++); 
+            printf("\n");   
         }
-        printf("%02x", *ptr++); 
-        printf("\n");        
     #endif
 
         /* Activate External Interrupt Controller for sensor capture */
@@ -417,6 +424,25 @@ int main ( void )
             }
         }
 #else   /* Template code for processing sensor data */
+        //KL-why mode = 0 when come back here?
+        if (wifi_mode){
+            uint8_t wifi_tx_buffer[15];
+            uint8_t headerbyte = MDV_START_OF_FRAME;
+            wifi_tx_buffer[0] = headerbyte;
+            wifi_tx_buffer[14] = ~headerbyte;
+            ringbuffer_size_t rdcnt;
+            snsr_dataframe_t const *ptr = ringbuffer_get_read_buffer(&snsr_buffer, &rdcnt);
+                if(get_UDP_client_state() == UDP_CLIENT_STATE_READY)                     
+               {
+                   /* Copy 12 bytes of sensor data into tx_buf starting at index 1.
+                    * This is assuming both accel and gyro is used.
+                    */
+                   uint8_t triggerbyte = !(TRIGGER_PA02_Get());
+                   memcpy(&wifi_tx_buffer[1], (uint8_t *) ptr, 12);
+                   wifi_tx_buffer[13]=triggerbyte;
+                   tx_wifi_new_sensordata(wifi_tx_buffer);
+               }           
+        }
 
 #endif //!STREAM_FORMAT_IS(NONE)
          else {
@@ -424,56 +450,68 @@ int main ( void )
             snsr_dataframe_t const *ptr = ringbuffer_get_read_buffer(&snsr_buffer, &rdcnt);
             
         #if STREAM_FORMAT_IS(NONE)
-            while (rdcnt--) {
-                snsr_status = false;
-                int ret = sml_recognition_run((snsr_data_t *) ptr++, SNSR_NUM_AXES);
-                snsr_status = true;
-                ringbuffer_advance_read_index(&snsr_buffer, 1);
-                
-                if (ret >= 0) {
-                    /* Do something with classification output */
-                    clsid = ret; // Assign class ID
-                    
-                    switch ( clsid )
-                    {
-                        case 1://4
-                        { 
-                            ws2812_set_pixel(0, 0, 255, 0);//green
-                            break;
+            if (!wifi_mode){
+                while (rdcnt--) {
+                    snsr_status = false;
+                    int ret = sml_recognition_run((snsr_data_t *) ptr++, SNSR_NUM_AXES);
+                    snsr_status = true;
+                    ringbuffer_advance_read_index(&snsr_buffer, 1);
+
+                    if (ret >= 0) {
+                        /* Do something with classification output */
+                        clsid = ret; // Assign class ID
+
+                        switch ( clsid )
+                        {
+                            case 0://unkown
+                            { 
+                                ws2812_set_pixel(0, 255, 255, 255);//white
+                                break;
+                            }
+                            case 1://4
+                            { 
+                                ws2812_set_pixel(0, 0, 255, 0);//green
+                                break;
+                            }
+
+                            case 2://unkown
+                            {
+                                ws2812_set_pixel(0, 255, 255, 255);//white
+                                break;
+                            }
+                             case 3://b
+                            {
+                                ws2812_set_pixel(0, 0, 255, 255);//cyan
+                                break;
+                            }
+                            case 4://idle
+                            {
+                                ws2812_set_pixel(0, 255, 127, 0);//orange
+                                break;
+                            }
+                             case 5://left
+                            {
+                                ws2812_set_pixel(0, 255, 0, 255);//violet
+                                break;
+                            }
+                             case 6://right
+                            {
+                                ws2812_set_pixel(0, 255, 0, 0);//red
+                                break;
+                            }
+                             case 7://tap
+                            {
+                                ws2812_set_pixel(0, 0, 0, 255);//blue
+                                break;
+                            }                           
+
                         }
-                        
-                        case 2://unkn
-                        {
-                            ws2812_set_pixel(0, 0, 128, 0);//yellow
-                            break;
-                        }
-                         case 3://b
-                        {
-                            ws2812_set_pixel(0, 0, 255, 255);//cyan
-                            break;
-                        }                       
-                         case 4://left
-                        {
-                            ws2812_set_pixel(0, 255, 0, 255);//violet
-                            break;
-                        }
-                         case 5://right
-                        {
-                            ws2812_set_pixel(0, 255, 0, 0);//red
-                            break;
-                        }
-                         case 6://tap
-                        {
-                            ws2812_set_pixel(0, 0, 0, 255);//blue
-                            break;
-                        }                           
-                         
+
+
+                        ws2812_show();
                     }
-                    
-                    
-                    ws2812_show();
-                }
-            }            
+                } 
+            }
         #endif
 
         }       
