@@ -9,12 +9,16 @@ This repository contains the firmware to classify a Wand Gesture detection on a 
 
 The supported activities are:
 
+- *Idle*
+- *Right Swipe*
+- *Left Swipe*
+- *b*
 - *Front Tap*
 - *4*
-- *b*
-- *Left Swipe*
-- *Right Swipe*
-- *Idle*
+
+
+
+
 
 In addition there is also an 'unknown' class for gesture-like movement and an 'idle' class for low motion activity.
 
