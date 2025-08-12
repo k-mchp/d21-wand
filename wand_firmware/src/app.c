@@ -103,7 +103,7 @@ void APP_Initialize ( void )
     }
     
     ws2812_init();
-    ws2812_set_pixel(0, 255, 0, 0);//red for logging mode
+    ws2812_set_pixel(0, 255, 0, 255);//red for logging mode
     ws2812_show();
 
 
