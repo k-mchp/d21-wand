@@ -18,8 +18,7 @@ The supported activities are:
 
 In addition there is also an 'unknown' class for gesture-like movement and an 'idle' class for low motion activity.
 
-## Inference Output
-![LED Output from model inference](assets/ineference_led.png)
+| ![LED Output from model inference](assets/inference_led.png)
 
 ## Triggered Gestures Dataset
 
