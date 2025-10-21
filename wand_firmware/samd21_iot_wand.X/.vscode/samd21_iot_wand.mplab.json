@@ -1,0 +1,656 @@
+{
+    "version": "1.7",
+    "importedFrom": "./",
+    "configurations": [
+        {
+            "name": "SAMD21_IOT_WG_BMI160",
+            "id": "conf1",
+            "device": "ATSAMD21G18A",
+            "imageType": "application",
+            "imagePath": "./out/samd21_iot_wand/SAMD21_IOT_WG_BMI160.elf",
+            "toolProperties": "SAMD21_IOT_WG_tool",
+            "tool": "PKOB nano",
+            "packs": [
+                {
+                    "name": "SAMD21_DFP",
+                    "vendor": "Microchip",
+                    "version": "3.6.144"
+                },
+                {
+                    "name": "CMSIS",
+                    "vendor": "ARM",
+                    "version": "5.4.0"
+                }
+            ],
+            "fileSet": "SAMD21_IOT_WG_BMI160 files",
+            "toolchain": "SAMD21_IOT_WG_BMI160-XC32",
+            "preBuildSteps": [],
+            "postBuildSteps": []
+        },
+        {
+            "name": "SAMD21_IOT_WG_ICM42688",
+            "id": "conf2",
+            "device": "ATSAMD21G18A",
+            "imageType": "application",
+            "imagePath": "./out/samd21_iot_wand/SAMD21_IOT_WG_ICM42688.elf",
+            "toolProperties": "SAMD21_IOT_WG_tool",
+            "tool": "PKOB nano",
+            "packs": [
+                {
+                    "name": "CMSIS",
+                    "vendor": "ARM",
+                    "version": "5.4.0"
+                },
+                {
+                    "name": "SAMD21_DFP",
+                    "vendor": "Microchip",
+                    "version": "3.6.144"
+                }
+            ],
+            "fileSet": "SAMD21_IOT_WG_ICM42688 files",
+            "toolchain": "SAMD21_IOT_WG_ICM42688-XC32",
+            "preBuildSteps": [],
+            "postBuildSteps": []
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "SAMD21_IOT_WG_BMI160-XC32",
+            "extend": "SAMD21_IOT_WG_XC32",
+            "type": "toolchain",
+            "properties": {
+                "compiler.additional-warnings": true,
+                "compiler.extra-include-directories": "../src;../src/config/SAMD21_IOT_WG_BMI160;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS;../src/packs/CMSIS/CMSIS/Core/Include;.",
+                "compiler.isolate-each-function": true,
+                "compiler.make-warnings-into-errors": true,
+                "compiler.optimization-level": "-O1",
+                "compiler.place-data-into-section": true,
+                "compiler.preprocessor-macros": "SNSR_TYPE_BMI160=1",
+                "compiler++.extra-include-directories": "../src;../src/config/SAMD21_IOT_WG_BMI160;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS;../src/packs/CMSIS/CMSIS/Core/Include;.",
+                "linker.heap-size": "0",
+                "linker.appendMe": [
+                    "-u",
+                    "_printf_float"
+                ],
+                "global.common-include-directories": "../bmi160;../sensiml"
+            }
+        },
+        {
+            "name": "SAMD21_IOT_WG_ICM42688-XC32",
+            "extend": "SAMD21_IOT_WG_XC32",
+            "type": "toolchain",
+            "properties": {
+                "compiler.additional-warnings": false,
+                "compiler.extra-include-directories": "../src;../src/config/SAMD21_IOT_WG_ICM42688;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/dev;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/bsp;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/bsp/include;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/common;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/driver;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/socket;../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/spi_flash;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS;../src/packs/CMSIS/CMSIS/Core/Include;.",
+                "compiler.isolate-each-function": false,
+                "compiler.make-warnings-into-errors": false,
+                "compiler.optimization-level": "-O2",
+                "compiler.place-data-into-section": false,
+                "compiler.preprocessor-macros": "SNSR_TYPE_ICM42688=1;ICM42688",
+                "compiler++.extra-include-directories": "../src;../src/config/SAMD21_IOT_WG_ICM42688;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS;../src/packs/CMSIS/CMSIS/Core/Include;.",
+                "linker.heap-size": "512",
+                "linker.appendMe": [
+                    "-u",
+                    "_printf_float"
+                ],
+                "global.common-include-directories": "../Icm426xx;../sensiml"
+            }
+        },
+        {
+            "name": "SAMD21_IOT_WG_XC32",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc32@4.60",
+            "properties": {
+                "compiler.addresss-attribute-use": false,
+                "compiler.cast-align": false,
+                "compiler.code-model": "default",
+                "compiler.const-model": "default",
+                "compiler.data-model": "default",
+                "compiler.disable-instruction-scheduling": false,
+                "compiler.enable-app-io": false,
+                "compiler.enable-omit-frame-pointer": false,
+                "compiler.enable-procedural-abstraction": false,
+                "compiler.enable-short-double": false,
+                "compiler.enable-symbols": true,
+                "compiler.enable-unroll-loops": false,
+                "compiler.exclude-floating-point": false,
+                "compiler.expand-pragma-config": false,
+                "compiler.generate-16-bit-code": false,
+                "compiler.generate-micro-compressed-code": false,
+                "compiler.keep-inline": false,
+                "compiler.oXC16gcc-errata": "",
+                "compiler.oXC16gcc-large-aggregate": false,
+                "compiler.oXC16gcc-mpa-lvl": "",
+                "compiler.oXC16gcc-name-text-sec": "",
+                "compiler.oXC16gcc-near-chars": false,
+                "compiler.oXC16gcc-no-isr-warn": false,
+                "compiler.oXC16gcc-sfr-warn": false,
+                "compiler.oXC16gcc-smar-io-lvl": "1",
+                "compiler.oXC16gcc-smart-io-fmt": "",
+                "compiler.post-instruction-scheduling": "default",
+                "compiler.pre-instruction-scheduling": "default",
+                "compiler.scalar-model": "default",
+                "compiler.strict-ansi": false,
+                "compiler.support-ansi": false,
+                "compiler.tentative-definitions": "-fno-common",
+                "compiler.toplevel-reordering": "",
+                "compiler.unaligned-access": "",
+                "compiler.use-cci": false,
+                "compiler.use-iar": false,
+                "compiler.use-indirect-calls": false,
+                "compiler++.additional-warnings": false,
+                "compiler++.addresss-attribute-use": false,
+                "compiler++.check-new": false,
+                "compiler++.eh-specs": true,
+                "compiler++.enable-app-io": false,
+                "compiler++.enable-omit-frame-pointer": false,
+                "compiler++.enable-symbols": true,
+                "compiler++.enable-unroll-loops": false,
+                "compiler++.exceptions": true,
+                "compiler++.exclude-floating-point": false,
+                "compiler++.generate-16-bit-code": false,
+                "compiler++.generate-micro-compressed-code": false,
+                "compiler++.isolate-each-function": true,
+                "compiler++.make-warnings-into-errors": false,
+                "compiler++.optimization-level": "",
+                "compiler++.place-data-into-section": false,
+                "compiler++.post-instruction-scheduling": "default",
+                "compiler++.pre-instruction-scheduling": "default",
+                "compiler++.preprocessor-macros": "",
+                "compiler++.rtti": true,
+                "compiler++.strict-ansi": false,
+                "compiler++.toplevel-reordering": "",
+                "compiler++.unaligned-access": "",
+                "compiler++.use-cci": false,
+                "compiler++.use-iar": false,
+                "compiler++.use-indirect-calls": false,
+                "assembler.assembler-symbols": "",
+                "assembler.enable-symbols": true,
+                "assembler.exclude-floating-point-library": false,
+                "assembler.expand-macros": false,
+                "assembler.extra-include-directories-for-assembler": ".",
+                "assembler.extra-include-directories-for-preprocessor": ".",
+                "assembler.false-conditionals": false,
+                "assembler.generate-16-bit-code": false,
+                "assembler.generate-micro-compressed-code": false,
+                "assembler.keep-locals": false,
+                "assembler.list-assembly": false,
+                "assembler.list-section-info": false,
+                "assembler.list-source": false,
+                "assembler.list-symbols": false,
+                "assembler.oXC16asm-extra-opts": "",
+                "assembler.oXC32asm-list-to-file": false,
+                "assembler.omit-debug-dirs": false,
+                "assembler.omit-forms": false,
+                "assembler.preprocessor-macros": "",
+                "assembler.relax": false,
+                "assembler.warning-level": "",
+                "archiver.additional-options-chop-files": false,
+                "linker.additional-options-use-response-files": false,
+                "linker.additional-options-write-sla": false,
+                "linker.allocate-dinit": false,
+                "linker.code-dinit": false,
+                "linker.ebase-addr": "",
+                "linker.enable-check-sections": false,
+                "linker.enable-data-init": true,
+                "linker.enable-default-isr": true,
+                "linker.exclude-floating-point-library": false,
+                "linker.exclude-standard-libraries": false,
+                "linker.extra-lib-directories": ".",
+                "linker.fill-flash-options-addr": "",
+                "linker.fill-flash-options-const": "",
+                "linker.fill-flash-options-how": "0",
+                "linker.fill-flash-options-inc-const": "1",
+                "linker.fill-flash-options-increment": "",
+                "linker.fill-flash-options-seq": "",
+                "linker.fill-flash-options-what": "0",
+                "linker.generate-16-bit-code": false,
+                "linker.generate-cross-reference-file": false,
+                "linker.generate-micro-compressed-code": false,
+                "linker.input-libraries": "",
+                "linker.kseg-length": "",
+                "linker.kseg-origin": "",
+                "linker.linker-symbols": "",
+                "linker.map-file": "",
+                "linker.no-device-startup-code": true,
+                "linker.no-ivt": false,
+                "linker.no-startup-files": false,
+                "linker.oXC16ld-force-link": false,
+                "linker.oXC16ld-no-smart-io": false,
+                "linker.oXC16ld-stackguard": "16",
+                "linker.oXC32ld-extra-opts": "",
+                "linker.optimization-level": "",
+                "linker.preprocessor-macros": "",
+                "linker.remove-unused-sections": true,
+                "linker.report-memory-usage": false,
+                "linker.serial-length": "",
+                "linker.serial-origin": "",
+                "linker.stack-size": "",
+                "linker.symbol-stripping": "",
+                "linker.trace-symbols": "",
+                "linker.warn-section-align": false,
+                "coverage.coverage-enable": "",
+                "coverage.stack-guidance": false,
+                "global.combine-sourcefiles": false,
+                "global.common-macros": "",
+                "global.dual-boot-partition": "0",
+                "global.generic-16-bit": false,
+                "global.gp-relative-option": "",
+                "global.legacy-libc": false,
+                "global.mdtcm": "",
+                "global.mitcm": "",
+                "global.mpreserve-all": false,
+                "global.mstacktcm": false,
+                "global.omit-pack-options": "1",
+                "global.preserve-all": false,
+                "global.preserve-file": "",
+                "global.relaxed-math": false,
+                "global.save-temps": false,
+                "global.stack-smashing": "",
+                "global.wpo-lto": false
+            }
+        },
+        {
+            "name": "SAMD21_IOT_WG_tool",
+            "type": "tool",
+            "properties": {
+                "AutoSelectMemRanges": "auto",
+                "arm.use_vtor": false,
+                "arm.vtor_adr": "exception_table",
+                "communication.activationmode": "nohv",
+                "communication.interface": "swd",
+                "communication.speed": "2.000",
+                "debugoptions.debug-startup": "Use system settings",
+                "debugoptions.reset-behaviour": "Use system settings",
+                "debugoptions.useswbreakpoints": true,
+                "event.recorder.debugger.behavior": "Running",
+                "event.recorder.enabled": false,
+                "event.recorder.scvd.files": "",
+                "firmware.path": "Press to browse for a specific firmware version",
+                "firmware.toolpack": "Press to select which tool pack to use",
+                "firmware.update.action": "firmware.update.use.latest",
+                "freeze.timers": false,
+                "lastid": "",
+                "loader.board_file": "${ProjectDir}/board.xboard",
+                "memories.aux": false,
+                "memories.bootflash": true,
+                "memories.configurationmemory": true,
+                "memories.configurationmemory2": true,
+                "memories.dataflash": true,
+                "memories.eeprom": true,
+                "memories.exclude.configurationmemory": true,
+                "memories.flashdata": true,
+                "memories.id": true,
+                "memories.instruction.ram.ranges": "${memories.instruction.ram.ranges}",
+                "memories.programmemory": true,
+                "memories.programmemory.ranges": "0-3ffff",
+                "poweroptions.powerenable": false,
+                "programoptions.eraseb4program": true,
+                "programoptions.preservedataflash": false,
+                "programoptions.preservedataflash.ranges": "${memories.dataflash.default}",
+                "programoptions.preserveeeprom": false,
+                "programoptions.preserveeeprom.ranges": "",
+                "programoptions.preserveprogram.ranges": "",
+                "programoptions.preserveprogramrange": false,
+                "programoptions.preserveuserid": false,
+                "programoptions.programuserotp": false,
+                "script.has_reset": true,
+                "script.log_level": "1",
+                "script.reset_delay": "0",
+                "script.show_output": false,
+                "toolpack.updateoptions": "toolpack.updateoptions.uselatestoolpack",
+                "toolpack.updateoptions.packversion": "Press to select which tool pack to use",
+                "voltagevalue": "",
+                "x.erase.clearprot": true
+            }
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "SAMD21_IOT_WG_BMI160 files",
+            "files": [
+                "../src/app_config.h",
+                "../src/sensor_config.h",
+                "../src/ringbuffer.h",
+                "../src/sensor.h",
+                "../src/app.h",
+                "../src/ws2812.h",
+                "Makefile",
+                "../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc",
+                "../src/config/SAMD21_IOT_WG_ICM42688/SAMD21_IOT_WG_ICM42688.mhc",
+                "../src/main.c",
+                "../src/ringbuffer.c",
+                "../src/app.c",
+                "../src/ws2812.c",
+                "../src/winc1500_udp_client.c",
+                {
+                    "include": "../Icm426xx/*",
+                    "exclude": [
+                        "../Icm426xx/Icm426xxDefs.h",
+                        "../Icm426xx/Icm426xxDriver_HL.c",
+                        "../Icm426xx/Icm426xxDriver_HL.h",
+                        "../Icm426xx/Icm426xxDriver_HL_apex.c",
+                        "../Icm426xx/Icm426xxDriver_HL_apex.h",
+                        "../Icm426xx/Icm426xxExtFunc.h",
+                        "../Icm426xx/Icm426xxSelfTest.c",
+                        "../Icm426xx/Icm426xxSelfTest.h",
+                        "../Icm426xx/Icm426xxTransport.c",
+                        "../Icm426xx/Icm426xxTransport.h",
+                        "../Icm426xx/Icm426xxVersion.h",
+                        "../Icm426xx/InvError.h",
+                        "../Icm426xx/InvExport.h"
+                    ]
+                },
+                "../bmi160/*",
+                "../sensiml/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/peripheral/tc/*",
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/ATSAMD21G18A.ld",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/definitions.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/device.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/device_cache.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/device_vectors.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/exceptions.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/initialization.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/interrupts.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/interrupts.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/libc_syscalls.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/startup_xc32.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h"
+                    ]
+                },
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/spi/**/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/dev/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/bsp/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/common/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/driver/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/socket/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/spi_flash/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/osal/*",
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.h"
+                    ]
+                },
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/dmac/*",
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom_usart_common.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc3.c",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc3.h",
+                        "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc_common.h"
+                    ]
+                },
+                "../src/config/SAMD21_IOT_WG_ICM42688/system/**/*",
+                "../src/packs/ATSAMD21G18A_DFP/**/*",
+                "../w5/12_1/application/*",
+                "../w5/12_1/mplabml/inc/*",
+                "../w5/12_1/mplabml/src/*",
+                "../src/app_config/bmi160/*",
+                {
+                    "include": "../src/app_config/icm42688/*",
+                    "exclude": "../src/app_config/icm42688/icm42688_sensor.c"
+                },
+                "../src/config/SAMD21_IOT_WG_BMI160/stdio/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/dev/gpio/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/dev/spi/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/common/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/socket/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/spi_flash/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/osal/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/*",
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_ICM42688/stdio/*",
+                    "exclude": "../src/config/SAMD21_IOT_WG_ICM42688/stdio/xc32_monitor.c"
+                },
+                "samd21_iot_wand_SAMD21_IOT_WG_ICM42688/**/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/SAMD21_IOT_WG_ICM42688.mhc/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc/*.yml"
+            ],
+            "encoding": "ISO-8859-1"
+        },
+        {
+            "name": "SAMD21_IOT_WG_ICM42688 files",
+            "files": [
+                "../src/app_config.h",
+                "../src/sensor_config.h",
+                "../src/ringbuffer.h",
+                "../src/sensor.h",
+                "../src/app.h",
+                "../src/ws2812.h",
+                "Makefile",
+                "../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc",
+                "../src/config/SAMD21_IOT_WG_ICM42688/SAMD21_IOT_WG_ICM42688.mhc",
+                "../src/main.c",
+                "../src/ringbuffer.c",
+                "../src/app.c",
+                "../src/ws2812.c",
+                "../src/winc1500_udp_client.c",
+                "../Icm426xx/*",
+                {
+                    "include": "../bmi160/*",
+                    "exclude": [
+                        "../bmi160/bmi160.c",
+                        "../bmi160/bmi160.h",
+                        "../bmi160/bmi160_defs.h"
+                    ]
+                },
+                "../sensiml/*",
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/ATSAMD21G18A.ld",
+                        "../src/config/SAMD21_IOT_WG_BMI160/definitions.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/device.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/device_cache.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/device_vectors.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/exceptions.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/initialization.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/interrupts.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/interrupts.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/libc_syscalls.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/startup_xc32.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/toolchain_specifics.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom_usart_common.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.h"
+                    ]
+                },
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/peripheral/tc/*",
+                    "exclude": [
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/tc/plib_tc3.c",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/tc/plib_tc3.h",
+                        "../src/config/SAMD21_IOT_WG_BMI160/peripheral/tc/plib_tc_common.h"
+                    ]
+                },
+                "../src/config/SAMD21_IOT_WG_ICM42688/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/spi/**/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/dev/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/bsp/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/common/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/driver/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/socket/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/drv/spi_flash/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/include/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/osal/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/dmac/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/system/**/*",
+                "../src/packs/ATSAMD21G18A_DFP/**/*",
+                "../w5/12_1/application/*",
+                "../w5/12_1/mplabml/inc/*",
+                "../w5/12_1/mplabml/src/*",
+                {
+                    "include": "../src/app_config/bmi160/*",
+                    "exclude": "../src/app_config/bmi160/bmi160_sensor.c"
+                },
+                "../src/app_config/icm42688/*",
+                {
+                    "include": "../src/config/SAMD21_IOT_WG_BMI160/stdio/*",
+                    "exclude": "../src/config/SAMD21_IOT_WG_BMI160/stdio/xc32_monitor.c"
+                },
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/dev/gpio/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/dev/spi/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/common/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/socket/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/spi_flash/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/osal/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/stdio/*",
+                "samd21_iot_wand_SAMD21_IOT_WG_ICM42688/**/*",
+                "../src/config/SAMD21_IOT_WG_ICM42688/SAMD21_IOT_WG_ICM42688.mhc/*",
+                "../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc/*.yml"
+            ],
+            "encoding": "ISO-8859-1"
+        }
+    ]
+}

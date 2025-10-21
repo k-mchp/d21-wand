@@ -1,0 +1,21 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "samd21_iot_wand_SAMD21_IOT_WG_ICM42688_conf",
+            "binaryDir": "${fileDir}/../../../_build/samd21_iot_wand/SAMD21_IOT_WG_ICM42688",
+            "generator": "Ninja",
+            "toolchainFile": "${fileDir}/.generated/toolchain.cmake",
+            "cacheVariables": {
+                "CMAKE_USER_MAKE_RULES_OVERRIDE": {
+                    "type": "FILEPATH",
+                    "value": "${fileDir}/.generated/overrides.cmake"
+                },
+                "CMAKE_EXPORT_COMPILE_COMMANDS": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        }
+    ]
+}

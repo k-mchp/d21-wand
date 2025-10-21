@@ -1,0 +1,5 @@
+C:/Users/C51209/d21-wand/wand_firmware/samd21_iot_wand.X/_build/samd21_iot_wand/SAMD21_IOT_WG_BMI160/CMakeFiles/samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_compile.dir
+C:/Users/C51209/d21-wand/wand_firmware/samd21_iot_wand.X/_build/samd21_iot_wand/SAMD21_IOT_WG_BMI160/CMakeFiles/samd21_iot_wand_SAMD21_IOT_WG_BMI160_image_af4H_RnR.dir
+C:/Users/C51209/d21-wand/wand_firmware/samd21_iot_wand.X/_build/samd21_iot_wand/SAMD21_IOT_WG_BMI160/CMakeFiles/samd21_iot_wand_SAMD21_IOT_WG_BMI160_Bin2Hex.dir
+C:/Users/C51209/d21-wand/wand_firmware/samd21_iot_wand.X/_build/samd21_iot_wand/SAMD21_IOT_WG_BMI160/CMakeFiles/edit_cache.dir
+C:/Users/C51209/d21-wand/wand_firmware/samd21_iot_wand.X/_build/samd21_iot_wand/SAMD21_IOT_WG_BMI160/CMakeFiles/rebuild_cache.dir
