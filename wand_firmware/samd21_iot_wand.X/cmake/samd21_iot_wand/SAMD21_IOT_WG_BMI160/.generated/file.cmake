@@ -1,0 +1,174 @@
+# The following variables contains the files used by the different stages of the build process.
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_assemble)
+set_source_files_properties(${samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_assemble} PROPERTIES LANGUAGE ASM)
+
+# For assembly files, add "." to the include path for each file so that .include with a relative path works
+foreach(source_file ${samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_assemble})
+        set_source_files_properties(${source_file} PROPERTIES INCLUDE_DIRECTORIES "$<PATH:NORMAL_PATH,$<PATH:REMOVE_FILENAME,${source_file}>>")
+endforeach()
+
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_assembleWithPreprocess)
+set_source_files_properties(${samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_assembleWithPreprocess} PROPERTIES LANGUAGE ASM)
+
+# For assembly files, add "." to the include path for each file so that .include with a relative path works
+foreach(source_file ${samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_assembleWithPreprocess})
+        set_source_files_properties(${source_file} PROPERTIES INCLUDE_DIRECTORIES "$<PATH:NORMAL_PATH,$<PATH:REMOVE_FILENAME,${source_file}>>")
+endforeach()
+
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_compile
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../bmi160/bmi160.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../sensiml/ssi_comms.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/app.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/app_config/bmi160/bmi160_sensor.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/exceptions.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/initialization.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/interrupts.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/libc_syscalls.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/peripheral/tc/plib_tc3.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/startup_xc32.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/stdio/xc32_monitor.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/spi/src/drv_spi.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/dev/gpio/wdrv_winc_eint.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/dev/gpio/wdrv_winc_gpio.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/dev/spi/wdrv_winc_spi.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/common/nm_common.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/m2m_hif.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/m2m_ota.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/m2m_periph.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/m2m_ssl.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/m2m_wifi.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/nmasic.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/nmbus.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/nmdrv.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/driver/nmspi.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/socket/inet_addr.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/socket/inet_ntop.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/socket/socket.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/spi_flash/flexible_flash.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/drv/spi_flash/spi_flash.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/osal/wdrv_winc_osal.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_assoc.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_authctx.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_bssctx.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_bssfind.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_custie.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_enterprise.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_host_file.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_httpprovctx.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_nvm.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_powersave.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_socket.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_softap.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_ssl.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_sta.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_systime.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/driver/winc/wdrv_winc_wps.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/peripheral/dmac/plib_dmac.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom2_spi_master.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/peripheral/tc/plib_tc4.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/system/dma/sys_dma.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/system/int/src/sys_int.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/system/time/src/sys_time.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_ICM42688/tasks.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/main.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/ringbuffer.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/winc1500_udp_client.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/ws2812.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/application/sml_recognition_run.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/array_contains.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/calc_area.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/column_to_row_complex.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/crossing_rate.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/dsp_dtw_distance.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/dsp_l1_distance.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/dsp_lsup_distance.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fftr.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fftr_utils.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fg_amplitude_global_p2p_low_frequency.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fg_amplitude_peak_to_peak.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fg_area_absolute_area_low_frequency.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fg_cross_p2p_difference.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fg_sampling_downsample.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fg_stats_abs_mean.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fg_stats_minimum.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/fixlog.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/imfcc.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/kb.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/kb_output.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/kb_pipeline.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/kb_post_processing.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/ma_symmetric.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/max_min_high_low_freq.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/mean.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/pme.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/pme_trained_neurons.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/ratio_diff_impl.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/rb.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/save_sensor_data.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/sf_downsample_by_averaging.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/sf_downsample_by_decimation.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/sg_windowing.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/sortarray.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/sorted_copy.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/st_absolute_average.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/st_average.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/st_high_pass_filter.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/st_moving_average.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/stat_mean.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/stat_moment.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/stats_percentile_presorted.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/std.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/sum.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/tr_min_max_scale.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_array.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_array_max_uint8.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_bitwise_abs_val.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_abs_max.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_absmean.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_abssum.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_argmax.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_autoscale.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_cumsum.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_max.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_mean.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_median.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_min.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_min_max.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_pass_threshold.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_std.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_buffer_variance.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_cross_column.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_cross_difference.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_crossing_rate.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_mean_crossing_rate.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_pct_time_over_sigma.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_pct_time_over_threshold.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_stats_max_min.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_total_area.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_model_total_energy.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../../w5/12_1/mplabml/src/utils_tr_sensor.c")
+set_source_files_properties(${samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_compile_cpp)
+set_source_files_properties(${samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_compile_cpp} PROPERTIES LANGUAGE CXX)
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_SAMD21_IOT_WG_BMI160_XC32_FILE_TYPE_link)
+
+# The linker script used for the build.
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_LINKER_SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/../../../../src/config/SAMD21_IOT_WG_BMI160/ATSAMD21G18A.ld")
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_image_name "SAMD21_IOT_WG_BMI160.elf")
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_image_base_name "SAMD21_IOT_WG_BMI160")
+
+# The output directory of the final image.
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_output_dir "${CMAKE_CURRENT_SOURCE_DIR}/../../../out/samd21_iot_wand")
+
+# The full path to the final image.
+set(samd21_iot_wand_SAMD21_IOT_WG_BMI160_full_path_to_image ${samd21_iot_wand_SAMD21_IOT_WG_BMI160_output_dir}/${samd21_iot_wand_SAMD21_IOT_WG_BMI160_image_name})

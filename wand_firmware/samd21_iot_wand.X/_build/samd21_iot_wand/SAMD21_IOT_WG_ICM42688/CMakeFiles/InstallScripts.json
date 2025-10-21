@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/C51209/d21-wand/wand_firmware/samd21_iot_wand.X/_build/samd21_iot_wand/SAMD21_IOT_WG_ICM42688/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
