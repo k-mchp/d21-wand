@@ -1,11 +1,11 @@
 {
     "configurations": [
         {
-            "reference": "@conf1",
+            "reference": "SAMD21_IOT_WG_BMI160",
             "toolSerial": "MCHP3309031800001902"
         },
         {
-            "reference": "@conf2",
+            "reference": "SAMD21_IOT_WG_ICM42688",
             "toolSerial": "MCHP3309031800001902"
         }
     ]

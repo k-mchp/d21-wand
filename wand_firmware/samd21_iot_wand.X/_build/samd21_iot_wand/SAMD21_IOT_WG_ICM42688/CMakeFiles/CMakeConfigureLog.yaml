@@ -18,14 +18,13 @@ events:
       - "CMakeLists.txt:17 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: c:/Program Files/Microchip/xc32/v4.60/bin/xc32-gcc.exe 
+      Compiler: c:/Program Files/Microchip/xc32/v5.00-TC9/bin/xc32-gcc.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      Warning: dinit optimization threshholds not set; dinit may not function
-      c:\\program files\\microchip\\xc32\\v4.60\\bin\\bin\\gcc\\pic32mx\\8.3.1\\..\\..\\..\\..\\bin/pic32m-ld.exe: warning: cannot find entry symbol _reset; defaulting to 000000009d000000
+      c:/Program Files/Microchip/xc32/v5.00-TC9/bin/bin/../../lib/gcc/pic32m/13.2.1/../../../../pic32m/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400018
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
@@ -42,14 +41,13 @@ events:
       - "CMakeLists.txt:17 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: c:/Program Files/Microchip/xc32/v4.60/bin/xc32-g++.exe 
+      Compiler: c:/Program Files/Microchip/xc32/v5.00-TC9/bin/xc32-g++.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      Warning: dinit optimization threshholds not set; dinit may not function
-      c:\\program files\\microchip\\xc32\\v4.60\\bin\\bin\\gcc\\pic32mx\\8.3.1\\..\\..\\..\\..\\bin/pic32m-ld.exe: warning: cannot find entry symbol _reset; defaulting to 000000009d000000
+      c:/Program Files/Microchip/xc32/v5.00-TC9/bin/bin/../../lib/gcc/pic32m/13.2.1/../../../../pic32m/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 0040003c
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
@@ -65,8 +63,8 @@ events:
       - "CMakeLists.txt:17 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
-      pic32m-gcc.exe (Microchip XC32 Compiler v4.60) 8.3.1 Build date: Feb 19 2025
-      Copyright (C) 2018 Free Software Foundation, Inc.
+      pic32m-gcc.exe (Microchip XC32 Compiler v5.00 TC9) 13.2.1 20231009 Build date: Aug  1 2025
+      Copyright (C) 2023 Free Software Foundation, Inc.
       This is free software; see the source for copying conditions.  There is NO
       warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
       

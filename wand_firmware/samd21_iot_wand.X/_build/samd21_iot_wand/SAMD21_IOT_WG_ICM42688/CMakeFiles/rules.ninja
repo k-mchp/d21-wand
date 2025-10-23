@@ -17,7 +17,7 @@
 rule C_COMPILER__samd21_iot_wand_SAMD21_IOT_WG_ICM42688_SAMD21_IOT_WG_ICM42688_XC32_compile_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}c:\PROGRA~1\MICROC~1\xc32\v4.60\bin\xc32-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}c:\PROGRA~1\MICROC~1\xc32\V5EBD8~1.00-\bin\xc32-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -25,7 +25,7 @@ rule C_COMPILER__samd21_iot_wand_SAMD21_IOT_WG_ICM42688_SAMD21_IOT_WG_ICM42688_X
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__samd21_iot_wand_SAMD21_IOT_WG_ICM42688_image__A9k5yNe_
-  command = cmd.exe /C "$PRE_LINK && c:\PROGRA~1\MICROC~1\xc32\v4.60\bin\xc32-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && c:\PROGRA~1\MICROC~1\xc32\V5EBD8~1.00-\bin\xc32-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES

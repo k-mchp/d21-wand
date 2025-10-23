@@ -34,7 +34,7 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/Microchip/xc32/v4.60/bin/xc32-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/Microchip/xc32/v5.00-TC9/bin/xc32-objdump.exe")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
